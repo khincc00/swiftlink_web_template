@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Warehouse with loading bays and a forklift moving stock</title>
+  <rect width="480" height="300" fill="#EEF4FA"/>
+  <circle cx="220" cy="160" r="130" fill="#DFEBF6"/>
+  <rect x="24" y="246" width="432" height="6" rx="3" fill="#D2DEEA"/>
+
+  <!-- Building -->
+  <path d="M40 122 208 60l168 62z" fill="#0A2463"/>
+  <rect x="56" y="122" width="304" height="124" fill="#FFFFFF"/>
+  <rect x="56" y="122" width="304" height="124" stroke="#C7D5E4" stroke-width="2"/>
+  <rect x="158" y="96" width="100" height="18" rx="4" fill="#247BA0"/>
+  <text x="208" y="109" text-anchor="middle" fill="#FFFFFF" font-family="Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="700" letter-spacing="2">WAREHOUSE</text>
+
+  <!-- Roller doors -->
+  <g>
+    <rect x="76" y="146" width="80" height="100" fill="#DFEBF6"/>
+    <path d="M76 158h80M76 170h80M76 182h80M76 194h80M76 206h80M76 218h80M76 230h80" stroke="#BCCDDE" stroke-width="2"/>
+    <rect x="168" y="146" width="80" height="100" fill="#15357A"/>
+    <rect x="168" y="146" width="80" height="20" fill="#DFEBF6"/>
+    <path d="M168 156h80" stroke="#BCCDDE" stroke-width="2"/>
+    <rect x="260" y="146" width="80" height="100" fill="#DFEBF6"/>
+    <path d="M260 158h80M260 170h80M260 182h80M260 194h80M260 206h80M260 218h80M260 230h80" stroke="#BCCDDE" stroke-width="2"/>
+  </g>
+
+  <!-- Racking inside open bay -->
+  <path d="M176 206h64M176 240h64" stroke="#2B5DAA" stroke-width="3"/>
+  <rect x="180" y="180" width="24" height="24" rx="2" fill="#C9A27A"/>
+  <rect x="208" y="184" width="26" height="20" rx="2" fill="#B88E63"/>
+  <rect x="182" y="214" width="22" height="24" rx="2" fill="#B88E63"/>
+  <rect x="208" y="214" width="26" height="24" rx="2" fill="#C9A27A"/>
+
+  <!-- Pallet -->
+  <rect x="20" y="238" width="52" height="8" rx="2" fill="#8C6A48"/>
+  <rect x="24" y="206" width="22" height="32" rx="2" fill="#C9A27A"/>
+  <rect x="48" y="214" width="20" height="24" rx="2" fill="#B88E63"/>
+
+  <!-- Forklift -->
+  <path d="M392 204v-30h28l12 30" stroke="#0A2463" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="384" y="202" width="56" height="34" rx="6" fill="#247BA0"/>
+  <rect x="444" y="160" width="7" height="80" rx="2" fill="#0A2463"/>
+  <rect x="451" y="232" width="24" height="5" rx="2" fill="#0A2463"/>
+  <rect x="452" y="204" width="24" height="28" rx="2" fill="#C9A27A"/>
+  <rect x="461" y="204" width="6" height="28" fill="#E6CFB2"/>
+  <circle cx="398" cy="240" r="11" fill="#04112F"/><circle cx="398" cy="240" r="4" fill="#E0E0E0"/>
+  <circle cx="430" cy="240" r="11" fill="#04112F"/><circle cx="430" cy="240" r="4" fill="#E0E0E0"/>
+</svg>

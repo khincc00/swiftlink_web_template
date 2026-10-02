@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Corporate charter coach</title>
+  <rect width="480" height="300" fill="#EEF4FA"/>
+
+  <!-- City backdrop -->
+  <g fill="#DFEBF6">
+    <rect x="44" y="96" width="44" height="150"/>
+    <rect x="96" y="60" width="36" height="186"/>
+    <rect x="140" y="112" width="54" height="134"/>
+    <rect x="300" y="78" width="40" height="168"/>
+    <rect x="348" y="118" width="52" height="128"/>
+    <rect x="408" y="92" width="34" height="154"/>
+  </g>
+  <rect x="32" y="246" width="416" height="6" rx="3" fill="#D2DEEA"/>
+
+  <!-- Coach -->
+  <rect x="56" y="112" width="364" height="122" rx="18" fill="#0A2463"/>
+  <g fill="#9CCBE0">
+    <rect x="74" y="126" width="44" height="40" rx="5"/>
+    <rect x="124" y="126" width="44" height="40" rx="5"/>
+    <rect x="174" y="126" width="44" height="40" rx="5"/>
+    <rect x="224" y="126" width="44" height="40" rx="5"/>
+    <rect x="274" y="126" width="44" height="40" rx="5"/>
+    <rect x="324" y="126" width="34" height="96" rx="5"/>
+    <path d="M370 126h28c8 0 12 4 13 10l3 46h-44z"/>
+  </g>
+  <path d="M341 126v96" stroke="#0A2463" stroke-width="2"/>
+  <rect x="56" y="176" width="262" height="10" fill="#247BA0"/>
+  <text x="168" y="212" fill="#FFFFFF" font-family="Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="700">SwiftLink</text>
+  <text x="254" y="212" fill="#7CC4DE" font-family="Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="2">CHARTER</text>
+  <rect x="408" y="196" width="10" height="10" rx="2" fill="#F6D27A"/>
+  <path d="M420 128h8v22" stroke="#0A2463" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Wheel arches + wheels -->
+  <circle cx="126" cy="236" r="28" fill="#EEF4FA"/>
+  <circle cx="352" cy="236" r="28" fill="#EEF4FA"/>
+  <circle cx="126" cy="236" r="21" fill="#04112F"/><circle cx="126" cy="236" r="9" fill="#E0E0E0"/>
+  <circle cx="352" cy="236" r="21" fill="#04112F"/><circle cx="352" cy="236" r="9" fill="#E0E0E0"/>
+</svg>

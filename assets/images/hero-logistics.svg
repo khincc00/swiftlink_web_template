@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" fill="none" role="img" aria-labelledby="title">
+  <title id="title">SwiftLink delivery truck driving past the Singapore skyline</title>
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(330 250) scale(260)">
+      <stop stop-color="#247BA0" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#247BA0" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="win" width="14" height="18" patternUnits="userSpaceOnUse">
+      <rect x="4" y="5" width="6" height="7" rx="1" fill="#2B5DAA"/>
+    </pattern>
+    <linearGradient id="beam" x1="458" y1="378" x2="600" y2="378" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6D27A" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#F6D27A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="330" cy="250" r="260" fill="url(#glow)"/>
+
+  <!-- Background towers -->
+  <g fill="#15357A">
+    <rect x="30" y="260" width="46" height="176" rx="2"/>
+    <rect x="84" y="206" width="38" height="230" rx="2"/>
+    <rect x="130" y="286" width="54" height="150" rx="2"/>
+    <rect x="512" y="232" width="42" height="204" rx="2"/>
+    <rect x="562" y="282" width="52" height="154" rx="2"/>
+  </g>
+  <g fill="url(#win)">
+    <rect x="30" y="268" width="46" height="160"/>
+    <rect x="84" y="214" width="38" height="214"/>
+    <rect x="130" y="294" width="54" height="134"/>
+    <rect x="512" y="240" width="42" height="188"/>
+    <rect x="562" y="290" width="52" height="138"/>
+  </g>
+
+  <!-- Singapore Flyer -->
+  <g stroke="#2B5DAA" stroke-linecap="round">
+    <circle cx="452" cy="262" r="62" stroke-width="5"/>
+    <path d="M452 200V324M390 262H514M408 218l88 88M496 218l-88 88" stroke-width="1.5"/>
+    <path d="M430 436l22-174 22 174" stroke-width="6"/>
+  </g>
+  <g fill="#7CC4DE">
+    <circle cx="452" cy="200" r="4"/><circle cx="514" cy="262" r="4"/><circle cx="390" cy="262" r="4"/>
+    <circle cx="496" cy="218" r="4"/><circle cx="408" cy="218" r="4"/><circle cx="496" cy="306" r="4"/><circle cx="408" cy="306" r="4"/>
+  </g>
+
+  <!-- Marina Bay Sands -->
+  <g fill="#1D4A93">
+    <path d="M244 436 254 190h28l-4 246z"/>
+    <path d="M296 436 302 190h28l-2 246z"/>
+    <path d="M348 436 350 190h28l2 246z"/>
+    <rect x="232" y="176" width="176" height="14" rx="7"/>
+  </g>
+  <g fill="url(#win)" opacity=".7">
+    <rect x="256" y="200" width="22" height="230"/>
+    <rect x="304" y="200" width="22" height="230"/>
+    <rect x="352" y="200" width="24" height="230"/>
+  </g>
+
+  <!-- Destination pin + route -->
+  <path d="M470 300C520 276 548 220 560 168" stroke="#7CC4DE" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 12"/>
+  <path d="M560 70a32 32 0 0 1 32 32c0 26-32 58-32 58s-32-32-32-58a32 32 0 0 1 32-32z" fill="#247BA0"/>
+  <circle cx="560" cy="102" r="12" fill="#FFFFFF"/>
+
+  <!-- Road -->
+  <rect x="0" y="436" width="640" height="64" fill="#061642"/>
+  <path d="M20 474H620" stroke="#E0E0E0" stroke-opacity=".45" stroke-width="3" stroke-dasharray="22 16"/>
+
+  <!-- Speed lines -->
+  <g stroke="#7CC4DE" stroke-width="4" stroke-linecap="round" opacity=".7">
+    <path d="M48 300h52M30 330h70M56 360h44"/>
+  </g>
+
+  <!-- Headlight beam -->
+  <path d="M458 372 600 344v74l-142-30z" fill="url(#beam)"/>
+
+  <!-- Truck: cargo box -->
+  <rect x="116" y="266" width="236" height="136" rx="8" fill="#FFFFFF"/>
+  <rect x="116" y="372" width="236" height="12" fill="#247BA0"/>
+  <text x="138" y="320" fill="#0A2463" font-family="Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="700">SwiftLink</text>
+  <text x="139" y="342" fill="#247BA0" font-family="Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.4">LOGISTICS &amp; TRANSPORT</text>
+  <path d="M296 296l14 14-14 14M314 296l14 14-14 14" stroke="#247BA0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Truck: chassis + cab -->
+  <rect x="110" y="400" width="350" height="14" rx="4" fill="#04112F"/>
+  <path d="M356 294h54c12 0 20 4 27 13l17 24c6 9 6 15 6 26v45H356z" fill="#247BA0"/>
+  <path d="M368 306h38c6 0 9 2 12 7l18 30h-68z" fill="#CDE7F2"/>
+  <path d="M398 352v44" stroke="#1C6587" stroke-width="2"/>
+  <rect x="404" y="360" width="14" height="4" rx="2" fill="#1C6587"/>
+  <rect x="452" y="368" width="8" height="14" rx="2" fill="#F6D27A"/>
+  <rect x="440" y="394" width="24" height="10" rx="3" fill="#E0E0E0"/>
+
+  <!-- Wheels -->
+  <g>
+    <circle cx="172" cy="420" r="24" fill="#04112F"/><circle cx="172" cy="420" r="10" fill="#E0E0E0"/><circle cx="172" cy="420" r="4" fill="#04112F"/>
+    <circle cx="232" cy="420" r="24" fill="#04112F"/><circle cx="232" cy="420" r="10" fill="#E0E0E0"/><circle cx="232" cy="420" r="4" fill="#04112F"/>
+    <circle cx="410" cy="420" r="24" fill="#04112F"/><circle cx="410" cy="420" r="10" fill="#E0E0E0"/><circle cx="410" cy="420" r="4" fill="#04112F"/>
+  </g>
+</svg>
