@@ -1,0 +1,203 @@
+<!--
+title: Services &amp; Fleet | SwiftLink Logistics &amp; Transport
+description: Goods delivery, corporate charter, point-to-point transfers and warehouse support in Singapore. Compare our fleet, find the right vehicle and see indicative rates.
+nav: services
+-->
+<!--
+  SERVICES — four service blocks (.svc, image side alternates automatically),
+  then the fleet grid, vehicle matcher and rates table, which are all generated
+  from assets/js/config.js by main.js (initFleet, initMatcher, initRates).
+  The section ids (#delivery, #charter, #transfer, #warehouse, #fleet, #matcher,
+  #rates) are linked from the sub-nav, the home page and the footer.
+-->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="page-hero-media"><img src="assets/images/photos/truck-singapore-street.jpg" alt="" width="1400" height="935"></div>
+      <div class="container page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Services</li></ol></nav>
+        <h1 id="page-title">Services and fleet</h1>
+        <p>Four service lines and eight vehicle types, all coordinated by one 24/7 dispatch team. Compare what's included, find the right vehicle and see indicative rates.</p>
+        <div class="page-hero-actions">
+          <a class="btn btn-primary btn-lg" href="quote.html">Get an instant quote {{icon:arrow}}</a>
+          <a class="btn btn-outline-light btn-lg" href="#matcher">Find my vehicle</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky sub-nav: the link of the section in view is highlighted by initSubnav (main.js). -->
+    <nav class="subnav" aria-label="On this page" data-subnav>
+      <div class="container">
+        <ul>
+          <li><a href="#delivery">{{icon:box}} Goods delivery</a></li>
+          <li><a href="#charter">{{icon:bus}} Corporate charter</a></li>
+          <li><a href="#transfer">{{icon:car}} Point-to-point</a></li>
+          <li><a href="#warehouse">{{icon:warehouse}} Warehouse</a></li>
+          <li><a href="#fleet">{{icon:truck}} Fleet</a></li>
+          <li><a href="#matcher">{{icon:layers}} Vehicle matcher</a></li>
+          <li><a href="#rates">{{icon:tag}} Rates &amp; add-ons</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="section" aria-label="Service details">
+      <div class="container">
+        <!-- To add a service: copy an <article class="svc">, give it a new id, add a sub-nav link,
+             and add the service to config.js → services (plus a radio in quote.html step 1). -->
+        <article class="svc reveal" id="delivery">
+          <div class="svc-media">
+            <img src="assets/images/photos/van-parcels.jpg" alt="Van loaded with parcels ready for delivery" width="1400" height="2100" loading="lazy">
+            <div class="svc-badge">{{icon:camera}}<div><strong>Photo proof of delivery</strong>On every drop</div></div>
+          </div>
+          <div class="svc-copy">
+            <p class="eyebrow">01 · Goods delivery</p>
+            <h2>Same-day, scheduled and recurring delivery.</h2>
+            <p>From a single urgent carton to a full office move. We match the vehicle to your load, send trained movers when needed and keep you updated from pickup to signature.</p>
+            <div class="svc-cols">
+              <div><h3>Ideal for</h3><ul class="ticks"><li>{{icon:check}}Retail and e-commerce restocks</li><li>{{icon:check}}B2B and event equipment</li><li>{{icon:check}}Office and studio moves</li></ul></div>
+              <div><h3>Included</h3><ul class="ticks"><li>{{icon:check}}Goods-in-transit cover</li><li>{{icon:check}}Live tracking number</li><li>{{icon:check}}Photos and e-signature</li></ul></div>
+            </div>
+            <div class="svc-foot">
+              <p class="svc-price">From <strong>S$55</strong> / trip</p>
+              <a class="btn btn-navy" href="quote.html?service=delivery">Quote a delivery {{icon:arrow}}</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="svc reveal" id="charter">
+          <div class="svc-media">
+            <img src="assets/images/photos/team-planning.jpg" alt="Team planning event transport schedules" width="1400" height="788" loading="lazy">
+            <div class="svc-badge">{{icon:users}}<div><strong>Up to 40 seats per coach</strong>Multi-vehicle fleets on request</div></div>
+          </div>
+          <div class="svc-copy">
+            <p class="eyebrow">02 · Corporate charter</p>
+            <h2>Coaches and minibuses for events and teams.</h2>
+            <p>We plan the run sheet with you: pickup waves, holding points and on-site coordinators for large events, so guests move on time and nobody is left waiting at the kerb.</p>
+            <div class="svc-cols">
+              <div><h3>Ideal for</h3><ul class="ticks"><li>{{icon:check}}Conferences and roadshows</li><li>{{icon:check}}Site visits and outings</li><li>{{icon:check}}Weddings and private functions</li></ul></div>
+              <div><h3>Included</h3><ul class="ticks"><li>{{icon:check}}Run-sheet planning</li><li>{{icon:check}}Driver and vehicle 15 min early</li><li>{{icon:check}}Passenger liability cover</li></ul></div>
+            </div>
+            <div class="svc-foot">
+              <p class="svc-price">From <strong>S$90</strong> / hour · min. 3 h</p>
+              <a class="btn btn-navy" href="quote.html?service=charter">Quote a charter {{icon:arrow}}</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="svc reveal" id="transfer">
+          <div class="svc-media">
+            <img src="assets/images/photos/executive-vehicle.jpg" alt="Executive vehicle ready for a transfer" width="1400" height="933" loading="lazy">
+            <div class="svc-badge">{{icon:clock}}<div><strong>Flight monitoring</strong>For Changi pickups</div></div>
+          </div>
+          <div class="svc-copy">
+            <p class="eyebrow">03 · Point-to-point</p>
+            <h2>Door-to-door executive and airport transfers.</h2>
+            <p>Well-presented drivers, clean late-model vehicles and quiet professionalism. Book a single trip or keep a car on standby for a full day of meetings.</p>
+            <div class="svc-cols">
+              <div><h3>Ideal for</h3><ul class="ticks"><li>{{icon:check}}Directors and VIP guests</li><li>{{icon:check}}Changi airport pickups</li><li>{{icon:check}}Roadshow days</li></ul></div>
+              <div><h3>Included</h3><ul class="ticks"><li>{{icon:check}}Meet &amp; greet on request</li><li>{{icon:check}}Free 45 min airport wait</li><li>{{icon:check}}Driver details by SMS</li></ul></div>
+            </div>
+            <div class="svc-foot">
+              <p class="svc-price">From <strong>S$60</strong> / hour</p>
+              <a class="btn btn-navy" href="quote.html?service=transfer">Quote a transfer {{icon:arrow}}</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="svc reveal" id="warehouse">
+          <div class="svc-media">
+            <img src="assets/images/photos/warehouse-forklift.jpg" alt="Forklift moving pallets in the warehouse" width="1400" height="1318" loading="lazy">
+            <div class="svc-badge">{{icon:warehouse}}<div><strong>Racked pallet storage</strong>West region facility</div></div>
+          </div>
+          <div class="svc-copy">
+            <p class="eyebrow">04 · Warehouse support</p>
+            <h2>Flexible storage with delivery built in.</h2>
+            <p>Store stock by the pallet and by the week during renovations, launches or seasonal peaks. When you need it back, the same team picks, packs and delivers.</p>
+            <div class="svc-cols">
+              <div><h3>Ideal for</h3><ul class="ticks"><li>{{icon:check}}Seasonal and launch stock</li><li>{{icon:check}}Renovation overflow</li><li>{{icon:check}}Event materials between shows</li></ul></div>
+              <div><h3>Included</h3><ul class="ticks"><li>{{icon:check}}CCTV and access control</li><li>{{icon:check}}Weekly stock report</li><li>{{icon:check}}Pick, pack and dispatch</li></ul></div>
+            </div>
+            <div class="svc-foot">
+              <p class="svc-price">From <strong>S$14</strong> / pallet / week</p>
+              <a class="btn btn-navy" href="quote.html?service=warehouse">Quote storage {{icon:arrow}}</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== Fleet ===================== -->
+    <section class="section section-tint" id="fleet" aria-labelledby="fleet-title">
+      <div class="container">
+        <div class="section-head section-head-split reveal">
+          <div>
+            <p class="eyebrow">Fleet guide</p>
+            <h2 id="fleet-title">Eight vehicle types, sized to the job.</h2>
+          </div>
+          <div class="fleet-filter" role="group" aria-label="Filter vehicles" data-fleet-filter>
+            <button type="button" data-type="all" aria-pressed="true">All</button>
+            <button type="button" data-type="goods" aria-pressed="false">Goods</button>
+            <button type="button" data-type="people" aria-pressed="false">Passengers</button>
+          </div>
+        </div>
+        <!-- Filled by initFleet from config.js → vehicles -->
+        <div class="fleet-grid" data-fleet-grid></div>
+      </div>
+    </section>
+
+    <!-- ===================== Matcher ===================== -->
+    <section class="section" id="matcher" aria-labelledby="matcher-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Vehicle matcher</p>
+          <h2 id="matcher-title">Not sure which vehicle? Tell us what's moving.</h2>
+          <p>We'll recommend the smallest vehicle that fits, so you never pay for empty space.</p>
+        </div>
+        <!-- initMatcher: each .stepper has data-step (the value key), data-max and data-inc.
+             The starting <output> numbers must match `vals` in initMatcher. -->
+        <div class="matcher reveal" data-matcher>
+          <form class="matcher-form" onsubmit="return false">
+            <div class="fleet-filter" role="group" aria-label="What are you moving?" data-matcher-mode>
+              <button type="button" data-mode="goods" aria-pressed="true">Goods</button>
+              <button type="button" data-mode="people" aria-pressed="false">Passengers</button>
+            </div>
+            <div data-matcher-goods>
+              <div class="matcher-row"><div><strong>Standard cartons</strong><small>About 50 × 40 × 40 cm</small></div><div class="stepper" data-step="cartons" data-max="500" data-inc="5"><button type="button" aria-label="Fewer cartons">{{icon:minus}}</button><output>20</output><button type="button" aria-label="More cartons">{{icon:plus}}</button></div></div>
+              <div class="matcher-row"><div><strong>Pallets</strong><small>Standard 1.2 × 1.0 m</small></div><div class="stepper" data-step="pallets" data-max="12" data-inc="1"><button type="button" aria-label="Fewer pallets">{{icon:minus}}</button><output>0</output><button type="button" aria-label="More pallets">{{icon:plus}}</button></div></div>
+              <div class="matcher-row"><div><strong>Large items</strong><small>Desks, cabinets, appliances</small></div><div class="stepper" data-step="large" data-max="60" data-inc="1"><button type="button" aria-label="Fewer large items">{{icon:minus}}</button><output>0</output><button type="button" aria-label="More large items">{{icon:plus}}</button></div></div>
+            </div>
+            <div data-matcher-people hidden>
+              <div class="matcher-row"><div><strong>Passengers</strong><small>Including any guides or hosts</small></div><div class="stepper" data-step="pax" data-max="200" data-inc="1"><button type="button" aria-label="Fewer passengers">{{icon:minus}}</button><output>4</output><button type="button" aria-label="More passengers">{{icon:plus}}</button></div></div>
+              <div class="matcher-row"><div><strong>Large bags</strong><small>Suitcases or equipment cases</small></div><div class="stepper" data-step="bags" data-max="80" data-inc="1"><button type="button" aria-label="Fewer bags">{{icon:minus}}</button><output>2</output><button type="button" aria-label="More bags">{{icon:plus}}</button></div></div>
+            </div>
+          </form>
+          <div class="matcher-result" aria-live="polite">
+            <p class="matcher-label">Recommended</p>
+            <h3 data-m-name>10 ft lorry</h3>
+            <p data-m-why>Fits your load with room to spare.</p>
+            <div>
+              <div class="load-bar"><span data-m-bar></span></div>
+              <div class="load-meta"><span data-m-load>Load 40%</span><span data-m-cap>Capacity 10 m³</span></div>
+            </div>
+            <dl class="matcher-specs" data-m-specs></dl>
+            <a class="btn btn-primary" href="quote.html" data-m-cta>Quote this vehicle {{icon:arrow}}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Rates ===================== -->
+    <section class="section section-tint" id="rates" aria-labelledby="rates-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Rates &amp; add-ons</p>
+          <h2 id="rates-title">Transparent, itemised pricing.</h2>
+          <p>Base rates are within one region. Cross-island trips add 20–45% depending on distance. Your instant quote applies all of this automatically.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="rates" data-rates-table>
+            <thead><tr><th scope="col">Item</th><th scope="col">Applies to</th><th scope="col">Detail</th><th scope="col">Price</th></tr></thead>
+            <tbody><!-- rows generated by initRates from config.js --></tbody>
+          </table>
+        </div>
+        <p class="rates-note">{{icon:info}} Sample indicative rates in Singapore dollars, before GST. Fixed pricing is confirmed in your written quotation.</p>
+      </div>
+    </section>

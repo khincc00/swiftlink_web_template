@@ -1,0 +1,81 @@
+<!--
+title: Contact | SwiftLink Logistics &amp; Transport
+description: Contact SwiftLink 24/7 by phone, WhatsApp or email. Registered office at 456 Logistics Avenue, Singapore 609876. Business accounts and general enquiries.
+nav: contact
+-->
+<!--
+  CONTACT — behaviour in initContact() (assets/js/main.js).
+  • contact.html?topic=account|booking|feedback|careers preselects the topic;
+    ?role=Job+title (from careers.html) pre-fills a job application.
+  • Sending: set config.js → forms.contact (or add action="https://…" to the
+    <form>) to submit in the background; otherwise the visitor's email app opens.
+-->
+    <section class="page-hero page-hero-plain" aria-labelledby="page-title">
+      <div class="container page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Contact</li></ol></nav>
+        <h1 id="page-title">Talk to a real dispatcher, any hour.</h1>
+        <p>For a price, use the <a href="quote.html" style="color:#fff">instant quote</a>. For everything else, including business accounts, reach us below.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: clamp(2rem, 5vw, 3.5rem)" aria-label="Contact options">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-cards">
+            <a class="contact-card" href="tel:{{c:tel}}"><span class="trust-icon">{{icon:phone}}</span><div><small>24/7 dispatch hotline</small><strong>{{c:phone}}</strong><p>Fastest for urgent and same-day jobs</p></div></a>
+            <a class="contact-card" href="https://wa.me/{{c:whatsapp}}" target="_blank" rel="noopener"><span class="trust-icon">{{icon:whatsapp}}</span><div><small>WhatsApp</small><strong>Message dispatch</strong><p>Send photos of your load or a booking number</p></div></a>
+            <a class="contact-card" href="mailto:{{c:email}}"><span class="trust-icon">{{icon:mail}}</span><div><small>Email</small><strong>{{c:email}}</strong><p>Replies within 2 working hours</p></div></a>
+            <div class="contact-card"><span class="trust-icon">{{icon:license}}</span><div><small>LTA licence</small><strong>{{c:licence}}</strong><p>Fully licensed and insured operator</p></div></div>
+          </div>
+
+          <div class="form-card">
+            <h2>Send us a message</h2>
+            <p>We usually reply within 2 working hours. Urgent? Call the hotline.</p>
+            <form class="form-grid" action="" method="POST" data-contact-form data-email="{{c:email}}" novalidate>
+              <div class="field span-2">
+                <label for="c-topic">Topic</label>
+                <select id="c-topic" name="topic">
+                  <option value="general">General enquiry</option>
+                  <option value="account">Open a business account</option>
+                  <option value="booking">Existing booking</option>
+                  <option value="feedback">Feedback or claim</option>
+                  <option value="careers">Careers (drivers &amp; movers)</option>
+                </select>
+              </div>
+              <div class="field"><label for="c-name">Full name <span class="req">*</span></label><input id="c-name" name="name" autocomplete="name" required><span class="field-error" data-error-for="name"></span></div>
+              <div class="field"><label for="c-company">Company</label><input id="c-company" name="company" autocomplete="organization"></div>
+              <div class="field"><label for="c-email">Email <span class="req">*</span></label><input id="c-email" name="email" type="email" autocomplete="email" required><span class="field-error" data-error-for="email"></span></div>
+              <div class="field"><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+              <div class="field span-2" data-booking-field hidden><label for="c-ref">Booking number</label><input id="c-ref" name="booking" class="mono" placeholder="SL-"></div>
+              <div class="field span-2"><label for="c-msg">Message <span class="req">*</span></label><textarea id="c-msg" name="message" required></textarea><span class="field-error" data-error-for="message"></span></div>
+              <!-- PDPA consent (required). Wording and link target: privacy.html -->
+              <div class="field consent span-2">
+                <label class="consent-label"><input type="checkbox" name="consent" value="yes" required data-required-msg="Please agree so we can reply to your message."><span>I agree to SwiftLink using my details to respond to this enquiry, as described in the <a href="privacy.html" target="_blank">privacy policy</a>.</span></label>
+                <span class="field-error" data-error-for="consent"></span>
+              </div>
+              <!-- Honeypot: invisible to people; if a bot fills it the message is dropped. -->
+              <div class="hp-field" aria-hidden="true"><label for="c-website">Leave this empty</label><input id="c-website" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+              <div class="span-2">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Send message {{icon:arrow}}</button>
+                <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Registered office band. The directions link searches the postal code; replace with a
+             Google Maps share link of the real premises when available. -->
+        <div class="office-band">
+          <img src="assets/images/photos/singapore-sunset.jpg" alt="" width="2000" height="1125" loading="lazy">
+          <div class="office-band-copy">
+            <p class="eyebrow eyebrow-light">Registered office</p>
+            <h2>{{c:address}}</h2>
+            <p>Our West region base, next to the warehouse. Visits are by appointment so a coordinator can meet you.</p>
+            <div class="page-hero-actions">
+              <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Singapore+{{c:postal}}" target="_blank" rel="noopener">{{icon:pin}} Get directions</a>
+              <a class="btn btn-outline-light" href="tel:{{c:tel}}">{{icon:phone}} Book a visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

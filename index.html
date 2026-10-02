@@ -4,630 +4,607 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SwiftLink Logistics &amp; Transport | Licensed Transport Partner in Singapore</title>
-  <meta name="description" content="Licensed and insured transport and logistics in Singapore: goods delivery, corporate charter, point-to-point transfers and warehouse support, available 24/7.">
+  <meta name="description" content="LTA-licensed, insured transport and logistics in Singapore. Instant quotes, live shipment tracking, goods delivery, corporate charter and warehousing, 24/7.">
+  <link rel="canonical" href="https://www.swiftlink.com.sg/">
   <meta name="theme-color" content="#0A2463">
 
+  <!-- Social share preview (Facebook, LinkedIn, WhatsApp, X) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="SwiftLink Logistics &amp; Transport">
-  <meta property="og:description" content="Reliable, licensed transport and logistics across Singapore. Available 24/7.">
+  <meta property="og:site_name" content="SwiftLink Logistics &amp; Transport">
+  <meta property="og:title" content="SwiftLink Logistics &amp; Transport | Licensed Transport Partner in Singapore">
+  <meta property="og:description" content="LTA-licensed, insured transport and logistics in Singapore. Instant quotes, live shipment tracking, goods delivery, corporate charter and warehousing, 24/7.">
+  <meta property="og:url" content="https://www.swiftlink.com.sg/">
+  <meta property="og:image" content="https://www.swiftlink.com.sg/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_SG">
+  <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Icons and installable-app manifest -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Fonts: General Sans (headings) from Fontshare, Roboto + Roboto Mono from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 
-  <script>document.documentElement.classList.add('js');</script>
+  <!-- Runs before first paint: marks JS as available (enables reveal animations)
+       and picks the theme from ?theme= or the visitor's system setting, so the
+       page never flashes the wrong colours. -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      var t = new URLSearchParams(location.search).get('theme');
+      if (t !== 'dark' && t !== 'light') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      d.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <!-- config.js (business data) must load before main.js (shared behaviour). -->
+  <script src="assets/js/config.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 
+  <!-- Structured data for search engines (generated from COMPANY in build.py) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "SwiftLink Logistics & Transport Pte Ltd",
-    "description": "Licensed transport and logistics provider in Singapore.",
-    "telephone": "+65 6777 4599",
-    "email": "enquiry@swiftlink.com.sg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "456 Logistics Avenue, #03-22",
-      "addressLocality": "Singapore",
-      "postalCode": "609876",
-      "addressCountry": "SG"
-    },
-    "openingHours": "Mo-Su 00:00-23:59",
-    "areaServed": "Singapore"
+{
+  "@context": "https://schema.org",
+  "@type": "MovingCompany",
+  "@id": "https://www.swiftlink.com.sg/#organization",
+  "name": "SwiftLink Logistics & Transport Pte Ltd",
+  "url": "https://www.swiftlink.com.sg/",
+  "logo": "https://www.swiftlink.com.sg/assets/images/icon-512.png",
+  "image": "https://www.swiftlink.com.sg/assets/images/og-image.jpg",
+  "description": "LTA-licensed transport and logistics provider in Singapore: goods delivery, corporate charter, point-to-point transfers and warehouse support.",
+  "telephone": "+65 6777 4599",
+  "email": "enquiry@swiftlink.com.sg",
+  "foundingDate": "2014",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "456 Logistics Avenue, #03-22",
+    "addressLocality": "Singapore",
+    "postalCode": "609876",
+    "addressCountry": "SG"
+  },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Singapore"
   }
+}
   </script>
 </head>
-<body>
-  <!-- Icon sprite: reference with <svg class="icon"><use href="#i-name"/></svg> -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
-    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></symbol>
-    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 4h14v12H1z"/><path d="M15 8h4l4 4v4h-8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
-    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
-    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
-    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
-    <symbol id="i-chev-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
-    <symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
-    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
-    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
-    <symbol id="i-handshake" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.9-3.9a3 3 0 0 0-4.2 0l-.9.9a1 1 0 1 1-3-3l2.8-2.8a5.8 5.8 0 0 1 7.1-.9l.5.3a2 2 0 0 0 1.4.2L21 4"/><path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3M3 4h8"/></symbol>
-    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol>
-    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
-    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
-    <symbol id="i-license" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2.5"/><path d="M5.5 17c.6-1.8 2-2.8 3.5-2.8s2.9 1 3.5 2.8M15 9h3M15 13h3"/></symbol>
-  </svg>
-
+<body data-page="home">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 4h14v12H1z"/><path d="M15 8h4l4 4v4h-8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol><symbol id="i-car" viewBox="0 0 24 24"><path d="M5 17h14M3 13l2-6a2 2 0 0 1 2-1.4h10A2 2 0 0 1 19 7l2 6v5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><circle cx="7.5" cy="13.5" r="1"/><circle cx="16.5" cy="13.5" r="1"/></symbol><symbol id="i-bus" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="15" rx="2"/><path d="M3 11h18M8 18v3M16 18v3M7 14.5h.01M17 14.5h.01"/></symbol><symbol id="i-warehouse" viewBox="0 0 24 24"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35a2 2 0 0 1 1.26-1.86l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35z"/><path d="M6 18h12M6 14h12M6 22V10h12v12"/></symbol><symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol><symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol><symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol><symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M3 21l1.65-4.8A8.5 8.5 0 1 1 7.8 19.4z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.2-1.9-1-.8.7a4 4 0 0 1-2.5-2.5l.7-.8-1-1.9z"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol><symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol><symbol id="i-chev-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol><symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol><symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol><symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol><symbol id="i-license" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2.5"/><path d="M5.5 17c.6-1.8 2-2.8 3.5-2.8s2.9 1 3.5 2.8M15 9h3M15 13h3"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></symbol><symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol><symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol><symbol id="i-expand" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol><symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol><symbol id="i-signature" viewBox="0 0 24 24"><path d="M3 17c3-1 4-7 6-7s1 6 3 6 2-3 4-3 2 2 5 2M3 21h18"/></symbol><symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol><symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol><symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol><symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4A4 4 0 1 1 12.6 8 4 4 0 0 1 16 11.4z"/><path d="M17.5 6.5h.01"/></symbol></svg>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===================== Header ===================== -->
+  <!-- Utility bar. The status text and dot are updated by main.js from
+       `dispatch.hours` in config.js; the clock shows Singapore time. -->
   <div class="utility-bar">
     <div class="container utility-inner">
+      <p class="utility-status"><span class="live-dot" aria-hidden="true" data-dispatch-dot></span><span data-dispatch-status>Dispatch online</span><span class="utility-sep" aria-hidden="true">·</span><span data-sg-clock>Singapore time</span></p>
       <ul class="utility-list">
-        <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+6567774599">+65 6777 4599</a></li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:enquiry@swiftlink.com.sg">enquiry@swiftlink.com.sg</a></li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Open 24/7, incl. public holidays</li>
+        <li class="hide-sm">LTA Licence <strong>LTA/TS/2023/01987</strong></li>
+        <li><a href="mailto:enquiry@swiftlink.com.sg"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span class="hide-sm">enquiry@swiftlink.com.sg</span><span class="show-sm">Email</span></a></li>
+        <li><a href="tel:+6567774599"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>+65 6777 4599</a></li>
       </ul>
-      <p class="utility-license">LTA License No.: <strong>LTA/TS/2023/01987</strong></p>
     </div>
   </div>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="SwiftLink Logistics &amp; Transport, home">
-        <img class="brand-mark" src="assets/images/favicon.svg" alt="" width="40" height="40">
-        <span class="brand-text">
-          <strong>SwiftLink</strong>
-          <small>Logistics &amp; Transport</small>
-        </span>
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+  <rect width="40" height="40" rx="10" fill="currentColor"/>
+  <path d="M11 12.5 18.5 20 11 27.5" fill="none" stroke="var(--logo-ink)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+  <path d="M19.5 12.5 27 20l-7.5 7.5" fill="none" stroke="var(--logo-ink)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        <span class="brand-text"><strong>SwiftLink</strong><small>Logistics &amp; Transport</small></span>
       </a>
 
+      <!-- Main navigation. Below 960px it becomes a full-screen menu opened by .nav-toggle (main.js). -->
       <nav class="main-nav" id="main-nav" aria-label="Main">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="index.html#testimonials">Testimonials</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <a class="btn btn-primary nav-cta-mobile" href="#contact">Request a Quote</a>
+        <ul><li><a href="services.html">Services</a></li><li><a href="track.html">Track</a></li><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <div class="nav-mobile-extra">
+          <a class="btn btn-primary btn-block" href="quote.html">Get an instant quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost btn-block" href="tel:+6567774599"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call +65 6777 4599</a>
+        </div>
       </nav>
 
       <div class="header-actions">
-        <a class="header-phone" href="tel:+6567774599">
-          <span class="header-phone-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
-          <span><small>Call us 24/7</small><strong>+65 6777 4599</strong></span>
-        </a>
-        <a class="btn btn-primary" href="#contact">Request a Quote</a>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <a class="btn btn-primary header-cta" href="quote.html">Get a quote</a>
+        <button class="icon-btn nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+          <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg><svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
       </div>
-
-      <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
-        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
-        <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
-      </button>
     </div>
   </header>
 
   <main id="main">
-    <!-- ===================== Hero ===================== -->
+<!--
+  HOME PAGE — section order: hero (+ quick console) · trust strip · services ·
+  why us (bento) · coverage map · booking process · business accounts ·
+  testimonials · FAQ. The footer CTA, header and footer come from _tools/build.py.
+  Sections are independent: delete or reorder a <section> without touching JS.
+-->
+    <!-- ===================== Hero =====================
+         Background photo: .hero-media (decorative, alt=""). Headline <em> is tinted teal.
+         The four .hero-proof figures are SAMPLE claims; confirm them with the client. -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media"><picture><source srcset="assets/images/photos/singapore-port.webp" type="image/webp"><img src="assets/images/photos/singapore-port.jpg" alt="" width="1400" height="933" fetchpriority="high"></picture></div>
       <div class="container hero-inner">
         <div class="hero-copy">
-          <span class="eyebrow eyebrow-light">Licensed transport partner in Singapore</span>
-          <h1 id="hero-title">Reliable logistics that move your business forward.</h1>
-          <p class="hero-lead">Licensed, insured and professional transport solutions for corporate, event and personal needs across Singapore, available around the clock.</p>
-
+          <p class="eyebrow eyebrow-light">LTA-licensed transport partner · Singapore</p>
+          <h1 id="hero-title">Goods and people, moved <em>on time</em>, island-wide.</h1>
+          <p class="hero-lead">One licensed, insured team for deliveries, corporate charter, transfers and short-term warehousing. Get a price in seconds and track every job live.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" href="#contact">Get a Free Quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn-outline-light btn-lg" href="#services">Explore Services</a>
+            <a class="btn btn-primary btn-lg" href="quote.html">Get an instant quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-outline-light btn-lg" href="services.html">Explore services</a>
           </div>
-
-          <ul class="hero-trust">
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Fully licensed by LTA</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>24/7 support</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Transparent pricing</li>
+          <ul class="hero-proof" aria-label="SwiftLink at a glance">
+            <li><strong>12+ yrs</strong><span>serving Singapore</span></li>
+            <li><strong>24/7</strong><span>dispatch &amp; support</span></li>
+            <li><strong>15 min</strong><span>typical booking confirmation</span></li>
+            <li><strong>5 / 5</strong><span>regions covered</span></li>
           </ul>
         </div>
 
-        <div class="hero-visual">
-          <img src="assets/images/hero-logistics.svg" alt="SwiftLink delivery truck driving past the Singapore skyline" width="640" height="500">
-          <div class="float-card float-card-top">
-            <span class="float-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
-            <span><strong>24/7 dispatch</strong><small>Weekends &amp; holidays</small></span>
+        <!-- Quick console: estimate + tracking (initConsole in main.js).
+             The service buttons (data-service) must match config.js → services.
+             Selects are filled by JS; the estimate uses the same SL.calc() as quote.html. -->
+        <div class="console" data-console>
+          <div class="console-tabs" role="tablist" aria-label="Quick tools">
+            <button class="console-tab" role="tab" id="tab-est" aria-controls="panel-est" aria-selected="true" type="button"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg> Instant estimate</button>
+            <button class="console-tab" role="tab" id="tab-trk" aria-controls="panel-trk" aria-selected="false" tabindex="-1" type="button"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg> Track shipment</button>
           </div>
-          <div class="float-card float-card-bottom">
-            <span class="float-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
-            <span><strong>Island-wide</strong><small>Every region of Singapore</small></span>
+
+          <div class="console-panel" role="tabpanel" id="panel-est" aria-labelledby="tab-est">
+            <form data-quick-quote>
+              <p class="console-title">What do you need moved?</p>
+              <div class="seg" role="group" aria-label="Service">
+                <button class="seg-btn" type="button" data-service="delivery" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg>Delivery</button>
+                <button class="seg-btn" type="button" data-service="charter" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-bus"/></svg>Charter</button>
+                <button class="seg-btn" type="button" data-service="transfer" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-car"/></svg>Transfer</button>
+                <button class="seg-btn" type="button" data-service="warehouse" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-warehouse"/></svg>Storage</button>
+              </div>
+              <div class="console-grid">
+                <div class="field" data-qq-route>
+                  <label for="qq-from">Pickup region</label>
+                  <select id="qq-from" name="from" data-region-select></select>
+                </div>
+                <div class="field" data-qq-route>
+                  <label for="qq-to">Drop-off region</label>
+                  <select id="qq-to" name="to" data-region-select></select>
+                </div>
+                <div class="field field-full" data-qq-vehicle>
+                  <label for="qq-vehicle">Vehicle</label>
+                  <select id="qq-vehicle" name="vehicle"></select>
+                </div>
+                <div class="field" data-qq-hours hidden>
+                  <label for="qq-hours">Hours</label>
+                  <select id="qq-hours" name="hours"></select>
+                </div>
+                <div class="field" data-qq-pallets hidden>
+                  <label for="qq-pallets">Pallets</label>
+                  <select id="qq-pallets" name="pallets"></select>
+                </div>
+                <div class="field" data-qq-weeks hidden>
+                  <label for="qq-weeks">Weeks</label>
+                  <select id="qq-weeks" name="weeks"></select>
+                </div>
+              </div>
+              <div class="estimate" aria-live="polite">
+                <div>
+                  <small>Indicative price</small>
+                  <span class="estimate-value" data-qq-total>S$—</span>
+                </div>
+                <div class="estimate-note"><small data-qq-basis>per trip, before add-ons</small></div>
+              </div>
+              <div class="console-actions">
+                <a class="btn btn-navy" href="quote.html" data-qq-continue>Continue to full quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                <a class="btn btn-ghost" href="tel:+6567774599" aria-label="Call dispatch"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></a>
+              </div>
+              <p class="console-foot"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg> Final price is confirmed by dispatch. No payment needed to request.</p>
+            </form>
+          </div>
+
+          <div class="console-panel" role="tabpanel" id="panel-trk" aria-labelledby="tab-trk" hidden>
+            <form action="track.html" method="get" data-quick-track>
+              <p class="console-title">Where's my shipment?</p>
+              <div class="field">
+                <label for="qt-id">Booking or tracking number</label>
+                <div class="input-icon"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><input id="qt-id" name="id" class="mono" placeholder="e.g. SL-240918" autocomplete="off" required></div>
+              </div>
+              <div class="sample-ids" aria-label="Try a sample tracking number">
+                <button type="button" data-fill="SL-240918">SL-240918</button>
+                <button type="button" data-fill="SL-240917">SL-240917</button>
+                <button type="button" data-fill="SL-240920">SL-240920</button>
+              </div>
+              <div class="console-actions">
+                <button class="btn btn-navy" type="submit">Track now <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                <a class="btn btn-ghost" href="https://wa.me/6567774599" target="_blank" rel="noopener" aria-label="Ask dispatch on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+              </div>
+              <p class="console-foot"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg> You'll find the number in your booking confirmation SMS or email.</p>
+            </form>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== Stats ===================== -->
-    <section class="stats" aria-label="SwiftLink at a glance">
-      <div class="container">
-        <dl class="stats-card">
-          <div class="stat"><dt>Years of experience</dt><dd>12+</dd></div>
-          <div class="stat"><dt>Operations &amp; support</dt><dd>24/7</dd></div>
-          <div class="stat"><dt>Island-wide coverage</dt><dd>100%</dd></div>
-          <div class="stat"><dt>Core service lines</dt><dd>4</dd></div>
-        </dl>
+    <!-- ===================== Trust strip =====================
+         Four credentials. LTA/TS/2023/01987 comes from COMPANY in _tools/build.py. -->
+    <section class="trust" aria-label="Credentials">
+      <div class="container trust-inner">
+        <div class="trust-item"><span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-license"/></svg></span><div><strong>LTA licensed</strong><span>Licence LTA/TS/2023/01987</span></div></div>
+        <div class="trust-item"><span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span><div><strong>Fully insured</strong><span>Goods-in-transit &amp; passenger cover</span></div></div>
+        <div class="trust-item"><span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span><div><strong>Open 24/7</strong><span>Including public holidays</span></div></div>
+        <div class="trust-item"><span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg></span><div><strong>Proof of delivery</strong><span>Photos &amp; e-signature on every job</span></div></div>
       </div>
     </section>
 
-    <!-- ===================== About ===================== -->
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container about-grid">
-        <div class="about-copy reveal">
-          <span class="eyebrow">About SwiftLink</span>
-          <h2 id="about-title">Professional service with a modern logistics approach</h2>
-          <p>SwiftLink Logistics &amp; Transport Pte Ltd is a fully licensed and insured transport provider based in Singapore, offering dependable solutions for business operations and everyday travel.</p>
-          <p>From point-to-point transfers to full-scale logistics support, our team is committed to safety, punctuality and a smooth customer experience from start to finish.</p>
-          <ul class="check-list">
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Licensed by LTA and fully insured</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Safety-first, professional drivers</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Punctual, on-schedule operations</li>
-            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Clear communication from booking to completion</li>
-          </ul>
-          <a class="btn btn-outline about-more" href="about.html">More about our company <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        </div>
-
-        <aside class="credentials reveal" aria-label="Company credentials">
-          <div class="credentials-head">
-            <span class="credentials-icon"><svg class="icon" aria-hidden="true"><use href="#i-license"/></svg></span>
-            <div>
-              <span class="eyebrow eyebrow-light">Company credentials</span>
-              <h3>Registered &amp; licensed operator</h3>
-            </div>
+    <!-- ===================== Services =====================
+         Four cards on a 12-column grid (spans 7/5/5/7, see .service-card:nth-child in CSS).
+         "From S$…" prices are typed here; keep them in line with config.js → vehicles / storage. -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head section-head-split reveal">
+          <div>
+            <p class="eyebrow">What we move</p>
+            <h2 id="services-title">Four service lines, one accountable team.</h2>
           </div>
-          <dl class="credentials-list">
-            <div><dt>Company</dt><dd>SwiftLink Logistics &amp; Transport Pte Ltd</dd></div>
-            <div><dt>LTA License No.</dt><dd>LTA/TS/2023/01987</dd></div>
-            <div><dt>Registered office</dt><dd>456 Logistics Avenue, #03-22, Singapore 609876</dd></div>
-            <div><dt>Operating hours</dt><dd>24 hours daily, including weekends &amp; public holidays</dd></div>
-          </dl>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ===================== Services ===================== -->
-    <section class="section section-tint" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Our services</span>
-          <h2 id="services-title">Flexible solutions for every movement</h2>
-          <p>Whether you are moving stock, people or inventory, we match the right vehicle and team to the job.</p>
+          <a class="btn btn-ghost" href="services.html">Compare all services <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
 
         <div class="services-grid">
-          <article class="service-card reveal">
-            <div class="service-media"><img src="assets/images/photos/van-parcels.jpg" alt="Delivery van loaded with parcels ready for drop-off" width="1400" height="2100" loading="lazy"></div>
+          <a class="service-card reveal" href="services.html#delivery">
+            <div class="service-media"><picture><source srcset="assets/images/photos/van-parcels.webp" type="image/webp"><img src="assets/images/photos/van-parcels.jpg" alt="Delivery van loaded with parcels" width="1400" height="2100" loading="lazy" style="object-position:center 60%"></picture></div>
             <div class="service-body">
-              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span>
-              <h3>Goods Delivery</h3>
-              <p>Efficient handling for parcels, retail stock and office moves.</p>
-              <a class="text-link" href="#contact">Request a quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <div class="service-top"><span class="chip chip-accent"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg> Goods delivery</span><span class="service-num">01</span></div>
+              <h3>Same-day and scheduled delivery</h3>
+              <p>Parcels, retail restocks, B2B drops and office moves, with vans to 24 ft lorries and trained movers.</p>
+              <div class="service-meta"><span class="service-price">From <strong>S$55</strong> per trip</span><span class="service-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
             </div>
-          </article>
-
-          <article class="service-card reveal">
-            <div class="service-media"><img src="assets/images/photos/chauffeur-driving.jpg" alt="Professional driver at the wheel of a charter vehicle" width="1400" height="2097" loading="lazy"></div>
+          </a>
+          <a class="service-card reveal" href="services.html#charter">
+            <div class="service-media"><picture><source srcset="assets/images/photos/chauffeur-driving.webp" type="image/webp"><img src="assets/images/photos/chauffeur-driving.jpg" alt="Professional driver at the wheel of a charter vehicle" width="1400" height="2097" loading="lazy" style="object-position:center 35%"></picture></div>
             <div class="service-body">
-              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-headset"/></svg></span>
-              <h3>Corporate Charter</h3>
-              <p>Executive vehicles and coaches for meetings, conferences and events.</p>
-              <a class="text-link" href="#contact">Request a quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <div class="service-top"><span class="chip chip-accent"><svg class="icon" aria-hidden="true"><use href="#i-bus"/></svg> Corporate charter</span><span class="service-num">02</span></div>
+              <h3>Coaches for events and teams</h3>
+              <p>Minibuses and 40-seat coaches for conferences, roadshows and site visits.</p>
+              <div class="service-meta"><span class="service-price">From <strong>S$90</strong> per hour</span><span class="service-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
             </div>
-          </article>
-
-          <article class="service-card reveal">
-            <div class="service-media"><img src="assets/images/photos/executive-vehicle.jpg" alt="Executive vehicle for door-to-door transfers" width="1400" height="933" loading="lazy"></div>
+          </a>
+          <a class="service-card reveal" href="services.html#transfer">
+            <div class="service-media"><picture><source srcset="assets/images/photos/executive-vehicle.webp" type="image/webp"><img src="assets/images/photos/executive-vehicle.jpg" alt="Executive vehicle for door-to-door transfers" width="1400" height="933" loading="lazy"></picture></div>
             <div class="service-body">
-              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg></span>
-              <h3>Point-to-Point</h3>
-              <p>Door-to-door service for business travel and private transfers.</p>
-              <a class="text-link" href="#contact">Request a quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <div class="service-top"><span class="chip chip-accent"><svg class="icon" aria-hidden="true"><use href="#i-car"/></svg> Point-to-point</span><span class="service-num">03</span></div>
+              <h3>Executive and airport transfers</h3>
+              <p>Door-to-door sedans and MPVs with flight monitoring and meet-and-greet.</p>
+              <div class="service-meta"><span class="service-price">From <strong>S$60</strong> per hour</span><span class="service-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
             </div>
-          </article>
-
-          <article class="service-card reveal">
-            <div class="service-media"><img src="assets/images/photos/warehouse-forklift.jpg" alt="Forklift moving stock between warehouse racks" width="1400" height="1318" loading="lazy"></div>
+          </a>
+          <a class="service-card reveal" href="services.html#warehouse">
+            <div class="service-media"><picture><source srcset="assets/images/photos/warehouse-forklift.webp" type="image/webp"><img src="assets/images/photos/warehouse-forklift.jpg" alt="Forklift moving stock between warehouse racks" width="1400" height="1318" loading="lazy"></picture></div>
             <div class="service-body">
-              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
-              <h3>Warehouse Support</h3>
-              <p>Short-term storage and supply chain support with dependable distribution.</p>
-              <a class="text-link" href="#contact">Request a quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <div class="service-top"><span class="chip chip-accent"><svg class="icon" aria-hidden="true"><use href="#i-warehouse"/></svg> Warehouse support</span><span class="service-num">04</span></div>
+              <h3>Short-term storage and distribution</h3>
+              <p>Pallet storage by the week in the West, with pick, pack and onward delivery handled by the same team.</p>
+              <div class="service-meta"><span class="service-price">From <strong>S$14</strong> per pallet / week</span><span class="service-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ===================== Why us ===================== -->
-    <section class="section" id="why" aria-labelledby="why-title">
+    <!-- ===================== Why =====================
+         Bento grid: .bento-a is the large navy tile (photo set in CSS), b–f are the smaller tiles. -->
+    <section class="section section-tint" id="why" aria-labelledby="why-title">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Why choose SwiftLink</span>
-          <h2 id="why-title">A transport partner you can depend on</h2>
-          <p>Every booking is backed by proper licensing, a responsive team and pricing you can plan around.</p>
+          <p class="eyebrow">Why SwiftLink</p>
+          <h2 id="why-title">The details that keep your schedule intact.</h2>
+          <p>Licensing and insurance are the baseline. What clients stay for is how predictable every job feels.</p>
         </div>
-
-        <div class="features-grid">
-          <article class="feature reveal">
-            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+        <div class="bento">
+          <article class="bento-card bento-a reveal">
+            <span class="bento-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <span class="bento-stat">24/7</span>
+            <h3>A real dispatcher, any hour.</h3>
+            <p>Call or WhatsApp at 3 a.m. on a public holiday and you'll reach someone who can assign a vehicle, not a voicemail.</p>
+          </article>
+          <article class="bento-card bento-b reveal">
+            <span class="bento-icon"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg></span>
+            <h3>Prices you can plan around</h3>
+            <p>Instant indicative rates online, then a fixed written quotation. Surcharges for urgency, after-hours and holidays are shown upfront.</p>
+          </article>
+          <article class="bento-card bento-c reveal">
+            <span class="bento-icon"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg></span>
+            <h3>Live tracking on every job</h3>
+            <p>Each booking gets a tracking number with status updates, driver details and ETA you can share with your team.</p>
+          </article>
+          <article class="bento-card bento-d reveal">
+            <span class="bento-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
             <h3>Licensed &amp; insured</h3>
-            <p>An LTA-licensed operator with full insurance cover, so your goods and passengers are protected.</p>
+            <p>LTA-licensed operator with goods-in-transit and passenger liability cover.</p>
           </article>
-          <article class="feature reveal">
-            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
-            <h3>Available 24/7</h3>
-            <p>Round-the-clock operations, including weekends and public holidays.</p>
+          <article class="bento-card bento-e reveal">
+            <span class="bento-icon"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg></span>
+            <h3>Proof of delivery</h3>
+            <p>Photos at pickup and drop-off plus an e-signature, sent to you automatically.</p>
           </article>
-          <article class="feature reveal">
-            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg></span>
-            <h3>Transparent pricing</h3>
-            <p>Clear, upfront quotations so you know the cost before you book.</p>
-          </article>
-          <article class="feature reveal">
-            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span>
-            <h3>Safe &amp; punctual</h3>
-            <p>Safety, punctuality and a smooth experience on every trip, big or small.</p>
-          </article>
-          <article class="feature reveal">
-            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
-            <h3>Island-wide coverage</h3>
-            <p>Scheduled and urgent transport across every region of Singapore.</p>
-          </article>
-          <article class="feature reveal">
-            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-headset"/></svg></span>
-            <h3>Dedicated support</h3>
-            <p>Our team stays reachable throughout the job and after it is completed.</p>
+          <article class="bento-card bento-f reveal">
+            <span class="bento-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span>
+            <h3>Clean paperwork</h3>
+            <p>GST-ready invoices, PO references and monthly statements for account clients.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===================== Coverage ===================== -->
-    <section class="coverage" id="coverage" aria-labelledby="coverage-title">
+    <!-- ===================== Coverage =====================
+         initMap in main.js: <svg class="sg-map" viewBox="0 0 1000 647" aria-label="Map of Singapore planning regions"><path class="map-region" data-region="central" d="M299.4,394.1 L305.1,384.3 L312.3,383.1 L338.4,398.5 L344.8,388.0 L321.1,373.3 L325.7,365.1 L316.8,355.4 L324.4,351.0 L333.6,370.0 L338.5,366.5 L345.0,328.6 L342.1,309.8 L351.8,299.4 L329.4,286.4 L328.2,272.3 L333.9,265.0 L326.2,257.0 L341.1,252.3 L356.8,266.9 L376.3,261.2 L373.8,253.2 L377.0,251.5 L392.2,251.6 L411.1,268.1 L423.0,267.3 L440.6,279.6 L450.5,269.5 L472.7,269.7 L479.2,263.5 L472.6,251.4 L464.1,243.7 L457.8,241.6 L451.2,245.4 L440.9,240.1 L445.3,227.0 L458.5,223.6 L461.1,212.9 L505.9,224.8 L520.2,238.8 L527.8,263.8 L562.5,262.1 L578.6,269.2 L586.9,284.2 L601.7,275.5 L620.9,294.8 L620.4,318.7 L630.1,341.9 L647.4,338.3 L650.0,349.7 L595.6,367.3 L576.2,379.0 L562.8,394.1 L554.7,391.1 L550.0,402.7 L527.0,420.3 L528.5,427.0 L524.9,422.2 L518.2,425.0 L509.4,420.1 L508.6,435.2 L497.4,422.9 L494.4,425.3 L497.6,433.5 L483.8,420.9 L468.9,421.4 L452.6,430.4 L453.3,436.0 L465.5,429.2 L477.2,428.7 L490.4,441.1 L477.8,447.5 L452.7,437.8 L454.8,446.5 L502.8,453.0 L484.7,477.2 L471.1,482.7 L461.4,472.6 L458.7,474.2 L451.2,462.0 L431.8,452.9 L432.3,450.1 L424.0,444.3 L425.1,446.5 L424.2,447.5 L416.3,437.8 L439.5,436.7 L449.9,441.4 L450.4,430.4 L444.1,430.3 L443.6,432.7 L439.9,432.6 L443.2,430.5 L433.6,427.7 L425.9,431.4 L426.4,426.7 L433.0,427.3 L426.4,423.4 L423.6,426.4 L417.1,424.9 L413.1,431.9 L401.2,420.3 L399.0,423.0 L390.3,418.0 L372.5,447.0 L358.1,438.4 L374.3,409.9 L354.6,398.3 L341.7,419.6 L299.4,394.1ZM522.5,509.3 L529.5,509.8 L532.4,515.0 L531.3,517.5 L522.5,509.3ZM491.9,515.1 L496.8,512.4 L506.3,518.3 L510.7,514.0 L506.5,507.6 L510.4,503.5 L505.8,502.0 L499.4,506.1 L504.7,499.8 L497.0,493.9 L505.1,499.2 L523.1,494.4 L521.3,500.1 L514.4,500.7 L512.7,504.5 L518.2,507.3 L525.5,520.1 L520.5,524.6 L510.7,514.9 L507.7,520.9 L509.8,533.0 L491.9,515.1ZM516.7,479.1 L506.2,477.1 L495.1,481.3 L510.7,466.6 L516.7,479.1ZM479.4,500.9 L477.2,488.8 L480.7,490.2 L486.0,503.7 L479.4,500.9ZM471.7,533.1 L474.9,528.7 L477.6,530.4 L478.3,531.9 L474.2,535.4 L471.7,533.1Z" tabindex="0" role="button" aria-label="Central region"/><path class="map-region" data-region="west" d="M385.5,539.2 L395.4,544.6 L405.3,559.6 L389.1,551.7 L385.5,539.2ZM0.0,470.5 L13.9,470.1 L13.7,465.0 L6.5,464.9 L6.5,451.3 L12.8,451.2 L13.0,446.1 L8.4,445.7 L8.2,436.4 L0.0,434.4 L8.6,434.0 L8.5,427.2 L2.2,427.0 L11.8,401.5 L24.7,393.8 L29.5,386.4 L25.1,360.6 L43.0,316.3 L39.1,314.8 L35.1,324.7 L31.2,323.2 L32.4,313.0 L58.0,275.5 L63.3,260.3 L56.9,249.1 L67.6,247.6 L71.9,233.5 L78.8,228.0 L90.4,203.3 L94.7,199.0 L97.7,201.1 L106.2,180.8 L115.8,169.8 L118.4,152.3 L113.1,152.7 L119.7,142.4 L117.6,135.2 L138.1,118.4 L136.3,113.6 L141.7,104.5 L142.0,94.7 L149.7,86.4 L180.9,76.9 L189.3,96.3 L195.6,98.6 L192.9,107.5 L198.6,109.2 L207.2,121.4 L227.6,116.7 L233.9,123.7 L253.1,123.5 L276.8,100.5 L282.7,130.7 L304.4,139.3 L305.9,169.3 L349.5,166.8 L362.4,227.3 L385.2,251.7 L374.5,253.2 L378.2,259.2 L375.8,261.4 L356.5,267.1 L341.1,252.5 L326.6,257.2 L334.4,265.2 L328.2,272.6 L330.3,287.4 L352.0,299.1 L342.1,309.8 L344.8,330.3 L339.3,364.6 L334.9,371.1 L324.2,351.1 L310.0,359.8 L297.0,361.1 L286.8,357.9 L285.4,351.4 L280.0,356.3 L256.9,350.5 L252.5,353.3 L228.2,336.5 L220.9,336.4 L221.4,340.3 L242.4,354.5 L220.2,354.8 L220.8,370.7 L231.2,373.1 L232.9,370.4 L246.1,375.4 L255.8,393.3 L269.6,399.3 L278.4,409.6 L262.8,417.7 L264.9,424.2 L243.6,436.9 L217.7,422.7 L216.6,418.3 L213.4,422.3 L207.9,419.6 L205.7,425.3 L224.5,438.8 L183.2,456.9 L175.5,429.7 L163.9,419.7 L154.4,430.5 L166.1,441.4 L175.4,478.1 L138.9,514.1 L136.1,512.2 L132.5,502.2 L137.6,512.2 L147.0,501.3 L139.2,489.6 L130.7,488.8 L118.7,467.8 L99.5,420.1 L99.5,409.9 L109.9,401.8 L114.6,407.4 L147.3,384.5 L171.8,372.8 L188.9,373.2 L163.0,402.8 L170.6,410.0 L178.9,401.3 L185.6,401.6 L186.5,392.4 L203.7,372.7 L208.6,369.4 L219.1,370.6 L218.9,338.9 L212.8,338.1 L211.4,349.5 L200.3,350.0 L199.9,345.5 L186.2,337.7 L194.0,346.9 L194.1,354.8 L186.2,352.8 L184.7,338.1 L182.4,351.9 L161.6,355.7 L156.8,334.8 L157.8,358.0 L150.7,360.8 L139.4,348.4 L138.7,340.0 L131.1,340.7 L132.1,352.6 L142.2,363.3 L126.1,377.3 L122.2,370.6 L108.0,360.7 L105.4,362.4 L99.8,352.1 L95.4,355.2 L91.4,350.3 L107.0,333.3 L104.4,330.3 L81.1,351.7 L92.2,388.0 L86.5,396.4 L71.9,397.7 L70.6,415.6 L77.9,416.4 L78.0,434.9 L24.1,435.5 L24.6,449.2 L80.1,449.2 L80.1,461.6 L66.5,467.7 L24.4,467.8 L24.3,481.8 L91.4,482.0 L91.4,500.5 L24.6,500.5 L24.1,515.6 L106.1,516.2 L109.5,525.4 L75.8,539.8 L5.2,521.5 L0.1,513.6 L0.0,470.5ZM314.7,548.4 L317.4,524.9 L327.1,546.0 L361.9,539.5 L364.5,558.5 L353.0,568.5 L347.3,581.0 L336.4,585.1 L320.7,571.0 L326.5,554.8 L318.7,558.9 L314.7,548.4ZM277.5,489.7 L291.2,483.7 L307.8,489.8 L314.2,485.1 L319.4,496.4 L334.4,499.0 L321.1,493.8 L318.8,480.6 L327.4,478.0 L349.4,495.0 L358.9,511.2 L347.1,509.4 L345.4,503.4 L337.2,498.2 L341.9,504.2 L338.0,509.2 L327.5,508.8 L303.3,499.2 L283.7,496.1 L277.5,489.7ZM297.3,503.7 L299.8,504.7 L304.6,507.5 L307.0,511.2 L302.8,512.6 L301.5,512.5 L302.1,507.0 L297.3,503.7ZM292.1,509.2 L292.4,502.8 L293.5,502.3 L295.6,503.0 L293.3,505.9 L299.3,507.6 L299.7,512.4 L292.1,509.2ZM253.6,616.2 L263.4,609.9 L281.3,614.8 L274.1,630.6 L265.3,628.9 L260.2,619.1 L253.6,616.2ZM210.0,551.2 L224.0,537.8 L240.7,533.1 L245.1,534.1 L246.9,534.8 L243.6,536.0 L247.7,540.3 L256.0,538.1 L258.8,544.6 L256.5,541.1 L252.4,544.6 L265.0,553.7 L257.5,550.9 L259.2,554.3 L230.2,555.7 L210.0,551.2ZM230.9,588.5 L241.4,587.7 L242.9,578.6 L252.1,577.0 L257.8,579.5 L261.2,587.7 L254.5,590.8 L254.1,595.5 L245.9,595.9 L235.5,602.4 L230.9,588.5Z" tabindex="0" role="button" aria-label="West region"/><path class="map-region" data-region="east" d="M596.1,252.8 L600.7,241.9 L614.0,234.9 L630.5,196.6 L645.5,183.5 L639.3,175.8 L645.2,164.7 L660.2,150.7 L680.7,144.2 L689.7,152.6 L684.9,160.8 L693.8,156.4 L699.0,161.9 L700.2,174.2 L723.1,184.6 L749.0,186.1 L749.1,181.4 L768.2,162.3 L780.9,159.5 L806.5,164.4 L814.9,169.6 L829.5,199.5 L835.1,201.2 L829.0,208.7 L837.6,211.6 L844.9,208.6 L874.7,221.9 L902.4,240.2 L905.5,244.4 L907.1,250.7 L903.6,252.6 L904.3,244.4 L895.3,236.0 L882.7,232.9 L884.2,238.1 L860.5,293.9 L861.2,303.4 L884.1,302.9 L884.4,320.3 L876.9,320.5 L876.3,311.7 L864.1,312.0 L863.9,320.8 L848.8,321.3 L846.9,330.8 L840.5,334.2 L828.4,329.9 L817.9,332.2 L798.7,324.4 L783.4,328.9 L786.1,326.1 L783.8,319.3 L755.5,320.9 L650.5,350.0 L647.3,338.5 L630.3,342.3 L620.4,318.7 L620.9,294.8 L601.7,275.5 L607.6,265.2 L606.3,256.1 L596.1,252.8Z" tabindex="0" role="button" aria-label="East region"/><path class="map-region" data-region="northeast" d="M875.3,130.7 L879.0,123.2 L876.0,121.5 L863.2,128.8 L844.1,126.7 L835.8,99.3 L862.5,72.0 L892.2,62.8 L906.8,64.2 L914.2,74.4 L961.4,90.5 L983.5,107.3 L993.0,125.6 L990.1,131.7 L999.1,137.6 L999.8,147.8 L976.9,197.9 L971.1,229.8 L973.5,241.0 L990.7,269.5 L989.4,275.1 L983.5,275.0 L859.4,167.6 L849.0,143.8 L873.7,141.5 L878.1,137.0 L875.3,130.7ZM664.2,100.1 L679.4,88.4 L704.4,97.2 L725.7,109.9 L755.5,105.8 L772.5,110.1 L804.7,106.7 L815.3,114.7 L823.2,138.7 L793.6,138.1 L792.0,141.0 L771.6,138.0 L730.6,147.7 L723.4,136.6 L714.2,135.1 L707.8,124.6 L673.1,111.0 L664.2,100.1ZM700.8,129.8 L720.5,140.5 L721.7,149.5 L709.7,139.9 L700.8,129.8ZM437.1,173.7 L441.4,158.4 L459.2,161.2 L508.2,153.7 L515.9,149.2 L516.5,136.5 L529.4,125.0 L530.3,110.1 L535.1,101.3 L547.8,86.6 L559.9,80.5 L585.0,93.3 L582.7,98.3 L586.1,93.9 L603.1,103.9 L605.2,115.9 L617.5,104.9 L635.6,102.9 L638.9,112.7 L643.4,110.9 L674.1,140.0 L672.1,145.4 L658.1,152.0 L643.8,166.7 L639.4,175.8 L645.8,183.2 L630.5,196.6 L613.7,235.4 L600.6,242.3 L596.2,252.6 L601.6,256.8 L606.2,255.5 L606.4,268.4 L598.6,278.6 L586.5,284.3 L578.8,269.3 L562.5,262.1 L527.6,263.9 L520.2,239.0 L512.5,230.3 L498.9,221.4 L461.1,214.0 L456.9,201.5 L459.6,190.9 L439.4,187.6 L442.8,177.0 L437.1,173.7Z" tabindex="0" role="button" aria-label="North-East region"/><path class="map-region" data-region="north" d="M523.6,39.1 L532.2,39.8 L552.3,63.7 L551.4,68.7 L543.8,73.4 L537.2,70.9 L526.5,57.6 L523.6,39.1ZM180.9,76.9 L209.0,51.4 L235.9,40.8 L255.6,41.5 L273.8,58.0 L271.1,63.2 L274.5,61.6 L275.8,66.0 L284.1,65.0 L286.1,50.7 L315.3,56.7 L331.7,55.8 L339.6,45.4 L339.1,37.5 L342.4,45.9 L405.7,4.8 L438.3,0.0 L448.4,4.4 L442.2,12.8 L449.8,7.5 L453.4,15.1 L459.5,4.5 L473.5,12.6 L470.1,22.1 L479.7,12.4 L523.0,33.0 L516.7,38.4 L524.2,58.8 L537.8,76.8 L522.4,91.6 L534.5,97.2 L542.1,94.9 L531.0,108.1 L529.4,125.0 L516.5,136.5 L517.5,147.0 L511.0,152.7 L459.1,161.2 L441.4,158.9 L437.1,173.7 L442.7,177.0 L439.3,187.3 L459.0,190.0 L456.9,201.4 L461.1,214.0 L458.6,223.9 L445.3,227.2 L440.9,240.2 L451.1,245.3 L457.8,241.5 L464.2,243.8 L478.6,257.8 L479.3,263.8 L472.0,269.9 L446.2,271.0 L441.0,279.7 L422.5,267.3 L411.2,268.1 L397.6,254.1 L385.2,251.7 L366.1,234.0 L349.4,166.9 L305.8,169.4 L304.4,139.4 L282.7,130.6 L276.9,101.1 L252.7,123.6 L233.8,123.7 L227.9,116.7 L206.6,121.3 L198.2,109.1 L192.5,108.0 L195.4,98.8 L189.1,96.4 L180.9,76.9Z" tabindex="0" role="button" aria-label="North region"/><text class="map-label" x="468" y="343">Central</text><text class="map-label" x="189" y="304">West</text><text class="map-label" x="737" y="253">East</text><text class="map-label" x="723" y="161">North-East</text><text class="map-label" x="390" y="114">North</text></svg> inserts _src/sgmap.svg; region tabs, ETA, hub and
+         areas are generated from config.js → regions. Hub pin positions are set in initMap. -->
+    <section class="section coverage" id="coverage" aria-labelledby="coverage-title">
       <div class="container coverage-grid">
         <div class="coverage-copy reveal">
-          <span class="eyebrow eyebrow-light">Coverage</span>
-          <h2 id="coverage-title">Serving every part of Singapore</h2>
-          <p>Scheduled or urgent, our fleet operates island-wide with responsive coordination and support.</p>
-          <ul class="region-list" aria-label="Regions served">
-            <li>Central</li>
-            <li>North</li>
-            <li>East</li>
-            <li>West</li>
-            <li>South</li>
-          </ul>
+          <p class="eyebrow eyebrow-light">Coverage</p>
+          <h2 id="coverage-title">Every region of Singapore, with typical urgent response times.</h2>
+          <p>Select a region on the map to see the areas we serve most and how quickly a vehicle usually reaches you for same-day jobs.</p>
+          <div class="region-tabs" role="group" aria-label="Choose a region" data-region-tabs></div>
+          <div class="region-panel" aria-live="polite" data-region-panel>
+            <div class="region-panel-head">
+              <h3 data-rp-name>Central</h3>
+              <p class="region-eta">Urgent pickup in <strong data-rp-eta>30–45 min</strong></p>
+            </div>
+            <p class="region-hub" data-rp-hub>Main dispatch hub</p>
+            <ul class="region-areas" data-rp-areas></ul>
+          </div>
         </div>
-
-        <div class="hours-card reveal">
-          <span class="hours-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
-          <h3>Operating hours</h3>
-          <p class="hours-big">24 hours <span>daily</span></p>
-          <p>Including weekends and public holidays.</p>
-          <a class="btn btn-primary" href="tel:+6567774599"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> +65 6777 4599</a>
+        <div class="map-wrap reveal" data-sg-map>
+          <svg class="sg-map" viewBox="0 0 1000 647" aria-label="Map of Singapore planning regions"><path class="map-region" data-region="central" d="M299.4,394.1 L305.1,384.3 L312.3,383.1 L338.4,398.5 L344.8,388.0 L321.1,373.3 L325.7,365.1 L316.8,355.4 L324.4,351.0 L333.6,370.0 L338.5,366.5 L345.0,328.6 L342.1,309.8 L351.8,299.4 L329.4,286.4 L328.2,272.3 L333.9,265.0 L326.2,257.0 L341.1,252.3 L356.8,266.9 L376.3,261.2 L373.8,253.2 L377.0,251.5 L392.2,251.6 L411.1,268.1 L423.0,267.3 L440.6,279.6 L450.5,269.5 L472.7,269.7 L479.2,263.5 L472.6,251.4 L464.1,243.7 L457.8,241.6 L451.2,245.4 L440.9,240.1 L445.3,227.0 L458.5,223.6 L461.1,212.9 L505.9,224.8 L520.2,238.8 L527.8,263.8 L562.5,262.1 L578.6,269.2 L586.9,284.2 L601.7,275.5 L620.9,294.8 L620.4,318.7 L630.1,341.9 L647.4,338.3 L650.0,349.7 L595.6,367.3 L576.2,379.0 L562.8,394.1 L554.7,391.1 L550.0,402.7 L527.0,420.3 L528.5,427.0 L524.9,422.2 L518.2,425.0 L509.4,420.1 L508.6,435.2 L497.4,422.9 L494.4,425.3 L497.6,433.5 L483.8,420.9 L468.9,421.4 L452.6,430.4 L453.3,436.0 L465.5,429.2 L477.2,428.7 L490.4,441.1 L477.8,447.5 L452.7,437.8 L454.8,446.5 L502.8,453.0 L484.7,477.2 L471.1,482.7 L461.4,472.6 L458.7,474.2 L451.2,462.0 L431.8,452.9 L432.3,450.1 L424.0,444.3 L425.1,446.5 L424.2,447.5 L416.3,437.8 L439.5,436.7 L449.9,441.4 L450.4,430.4 L444.1,430.3 L443.6,432.7 L439.9,432.6 L443.2,430.5 L433.6,427.7 L425.9,431.4 L426.4,426.7 L433.0,427.3 L426.4,423.4 L423.6,426.4 L417.1,424.9 L413.1,431.9 L401.2,420.3 L399.0,423.0 L390.3,418.0 L372.5,447.0 L358.1,438.4 L374.3,409.9 L354.6,398.3 L341.7,419.6 L299.4,394.1ZM522.5,509.3 L529.5,509.8 L532.4,515.0 L531.3,517.5 L522.5,509.3ZM491.9,515.1 L496.8,512.4 L506.3,518.3 L510.7,514.0 L506.5,507.6 L510.4,503.5 L505.8,502.0 L499.4,506.1 L504.7,499.8 L497.0,493.9 L505.1,499.2 L523.1,494.4 L521.3,500.1 L514.4,500.7 L512.7,504.5 L518.2,507.3 L525.5,520.1 L520.5,524.6 L510.7,514.9 L507.7,520.9 L509.8,533.0 L491.9,515.1ZM516.7,479.1 L506.2,477.1 L495.1,481.3 L510.7,466.6 L516.7,479.1ZM479.4,500.9 L477.2,488.8 L480.7,490.2 L486.0,503.7 L479.4,500.9ZM471.7,533.1 L474.9,528.7 L477.6,530.4 L478.3,531.9 L474.2,535.4 L471.7,533.1Z" tabindex="0" role="button" aria-label="Central region"/><path class="map-region" data-region="west" d="M385.5,539.2 L395.4,544.6 L405.3,559.6 L389.1,551.7 L385.5,539.2ZM0.0,470.5 L13.9,470.1 L13.7,465.0 L6.5,464.9 L6.5,451.3 L12.8,451.2 L13.0,446.1 L8.4,445.7 L8.2,436.4 L0.0,434.4 L8.6,434.0 L8.5,427.2 L2.2,427.0 L11.8,401.5 L24.7,393.8 L29.5,386.4 L25.1,360.6 L43.0,316.3 L39.1,314.8 L35.1,324.7 L31.2,323.2 L32.4,313.0 L58.0,275.5 L63.3,260.3 L56.9,249.1 L67.6,247.6 L71.9,233.5 L78.8,228.0 L90.4,203.3 L94.7,199.0 L97.7,201.1 L106.2,180.8 L115.8,169.8 L118.4,152.3 L113.1,152.7 L119.7,142.4 L117.6,135.2 L138.1,118.4 L136.3,113.6 L141.7,104.5 L142.0,94.7 L149.7,86.4 L180.9,76.9 L189.3,96.3 L195.6,98.6 L192.9,107.5 L198.6,109.2 L207.2,121.4 L227.6,116.7 L233.9,123.7 L253.1,123.5 L276.8,100.5 L282.7,130.7 L304.4,139.3 L305.9,169.3 L349.5,166.8 L362.4,227.3 L385.2,251.7 L374.5,253.2 L378.2,259.2 L375.8,261.4 L356.5,267.1 L341.1,252.5 L326.6,257.2 L334.4,265.2 L328.2,272.6 L330.3,287.4 L352.0,299.1 L342.1,309.8 L344.8,330.3 L339.3,364.6 L334.9,371.1 L324.2,351.1 L310.0,359.8 L297.0,361.1 L286.8,357.9 L285.4,351.4 L280.0,356.3 L256.9,350.5 L252.5,353.3 L228.2,336.5 L220.9,336.4 L221.4,340.3 L242.4,354.5 L220.2,354.8 L220.8,370.7 L231.2,373.1 L232.9,370.4 L246.1,375.4 L255.8,393.3 L269.6,399.3 L278.4,409.6 L262.8,417.7 L264.9,424.2 L243.6,436.9 L217.7,422.7 L216.6,418.3 L213.4,422.3 L207.9,419.6 L205.7,425.3 L224.5,438.8 L183.2,456.9 L175.5,429.7 L163.9,419.7 L154.4,430.5 L166.1,441.4 L175.4,478.1 L138.9,514.1 L136.1,512.2 L132.5,502.2 L137.6,512.2 L147.0,501.3 L139.2,489.6 L130.7,488.8 L118.7,467.8 L99.5,420.1 L99.5,409.9 L109.9,401.8 L114.6,407.4 L147.3,384.5 L171.8,372.8 L188.9,373.2 L163.0,402.8 L170.6,410.0 L178.9,401.3 L185.6,401.6 L186.5,392.4 L203.7,372.7 L208.6,369.4 L219.1,370.6 L218.9,338.9 L212.8,338.1 L211.4,349.5 L200.3,350.0 L199.9,345.5 L186.2,337.7 L194.0,346.9 L194.1,354.8 L186.2,352.8 L184.7,338.1 L182.4,351.9 L161.6,355.7 L156.8,334.8 L157.8,358.0 L150.7,360.8 L139.4,348.4 L138.7,340.0 L131.1,340.7 L132.1,352.6 L142.2,363.3 L126.1,377.3 L122.2,370.6 L108.0,360.7 L105.4,362.4 L99.8,352.1 L95.4,355.2 L91.4,350.3 L107.0,333.3 L104.4,330.3 L81.1,351.7 L92.2,388.0 L86.5,396.4 L71.9,397.7 L70.6,415.6 L77.9,416.4 L78.0,434.9 L24.1,435.5 L24.6,449.2 L80.1,449.2 L80.1,461.6 L66.5,467.7 L24.4,467.8 L24.3,481.8 L91.4,482.0 L91.4,500.5 L24.6,500.5 L24.1,515.6 L106.1,516.2 L109.5,525.4 L75.8,539.8 L5.2,521.5 L0.1,513.6 L0.0,470.5ZM314.7,548.4 L317.4,524.9 L327.1,546.0 L361.9,539.5 L364.5,558.5 L353.0,568.5 L347.3,581.0 L336.4,585.1 L320.7,571.0 L326.5,554.8 L318.7,558.9 L314.7,548.4ZM277.5,489.7 L291.2,483.7 L307.8,489.8 L314.2,485.1 L319.4,496.4 L334.4,499.0 L321.1,493.8 L318.8,480.6 L327.4,478.0 L349.4,495.0 L358.9,511.2 L347.1,509.4 L345.4,503.4 L337.2,498.2 L341.9,504.2 L338.0,509.2 L327.5,508.8 L303.3,499.2 L283.7,496.1 L277.5,489.7ZM297.3,503.7 L299.8,504.7 L304.6,507.5 L307.0,511.2 L302.8,512.6 L301.5,512.5 L302.1,507.0 L297.3,503.7ZM292.1,509.2 L292.4,502.8 L293.5,502.3 L295.6,503.0 L293.3,505.9 L299.3,507.6 L299.7,512.4 L292.1,509.2ZM253.6,616.2 L263.4,609.9 L281.3,614.8 L274.1,630.6 L265.3,628.9 L260.2,619.1 L253.6,616.2ZM210.0,551.2 L224.0,537.8 L240.7,533.1 L245.1,534.1 L246.9,534.8 L243.6,536.0 L247.7,540.3 L256.0,538.1 L258.8,544.6 L256.5,541.1 L252.4,544.6 L265.0,553.7 L257.5,550.9 L259.2,554.3 L230.2,555.7 L210.0,551.2ZM230.9,588.5 L241.4,587.7 L242.9,578.6 L252.1,577.0 L257.8,579.5 L261.2,587.7 L254.5,590.8 L254.1,595.5 L245.9,595.9 L235.5,602.4 L230.9,588.5Z" tabindex="0" role="button" aria-label="West region"/><path class="map-region" data-region="east" d="M596.1,252.8 L600.7,241.9 L614.0,234.9 L630.5,196.6 L645.5,183.5 L639.3,175.8 L645.2,164.7 L660.2,150.7 L680.7,144.2 L689.7,152.6 L684.9,160.8 L693.8,156.4 L699.0,161.9 L700.2,174.2 L723.1,184.6 L749.0,186.1 L749.1,181.4 L768.2,162.3 L780.9,159.5 L806.5,164.4 L814.9,169.6 L829.5,199.5 L835.1,201.2 L829.0,208.7 L837.6,211.6 L844.9,208.6 L874.7,221.9 L902.4,240.2 L905.5,244.4 L907.1,250.7 L903.6,252.6 L904.3,244.4 L895.3,236.0 L882.7,232.9 L884.2,238.1 L860.5,293.9 L861.2,303.4 L884.1,302.9 L884.4,320.3 L876.9,320.5 L876.3,311.7 L864.1,312.0 L863.9,320.8 L848.8,321.3 L846.9,330.8 L840.5,334.2 L828.4,329.9 L817.9,332.2 L798.7,324.4 L783.4,328.9 L786.1,326.1 L783.8,319.3 L755.5,320.9 L650.5,350.0 L647.3,338.5 L630.3,342.3 L620.4,318.7 L620.9,294.8 L601.7,275.5 L607.6,265.2 L606.3,256.1 L596.1,252.8Z" tabindex="0" role="button" aria-label="East region"/><path class="map-region" data-region="northeast" d="M875.3,130.7 L879.0,123.2 L876.0,121.5 L863.2,128.8 L844.1,126.7 L835.8,99.3 L862.5,72.0 L892.2,62.8 L906.8,64.2 L914.2,74.4 L961.4,90.5 L983.5,107.3 L993.0,125.6 L990.1,131.7 L999.1,137.6 L999.8,147.8 L976.9,197.9 L971.1,229.8 L973.5,241.0 L990.7,269.5 L989.4,275.1 L983.5,275.0 L859.4,167.6 L849.0,143.8 L873.7,141.5 L878.1,137.0 L875.3,130.7ZM664.2,100.1 L679.4,88.4 L704.4,97.2 L725.7,109.9 L755.5,105.8 L772.5,110.1 L804.7,106.7 L815.3,114.7 L823.2,138.7 L793.6,138.1 L792.0,141.0 L771.6,138.0 L730.6,147.7 L723.4,136.6 L714.2,135.1 L707.8,124.6 L673.1,111.0 L664.2,100.1ZM700.8,129.8 L720.5,140.5 L721.7,149.5 L709.7,139.9 L700.8,129.8ZM437.1,173.7 L441.4,158.4 L459.2,161.2 L508.2,153.7 L515.9,149.2 L516.5,136.5 L529.4,125.0 L530.3,110.1 L535.1,101.3 L547.8,86.6 L559.9,80.5 L585.0,93.3 L582.7,98.3 L586.1,93.9 L603.1,103.9 L605.2,115.9 L617.5,104.9 L635.6,102.9 L638.9,112.7 L643.4,110.9 L674.1,140.0 L672.1,145.4 L658.1,152.0 L643.8,166.7 L639.4,175.8 L645.8,183.2 L630.5,196.6 L613.7,235.4 L600.6,242.3 L596.2,252.6 L601.6,256.8 L606.2,255.5 L606.4,268.4 L598.6,278.6 L586.5,284.3 L578.8,269.3 L562.5,262.1 L527.6,263.9 L520.2,239.0 L512.5,230.3 L498.9,221.4 L461.1,214.0 L456.9,201.5 L459.6,190.9 L439.4,187.6 L442.8,177.0 L437.1,173.7Z" tabindex="0" role="button" aria-label="North-East region"/><path class="map-region" data-region="north" d="M523.6,39.1 L532.2,39.8 L552.3,63.7 L551.4,68.7 L543.8,73.4 L537.2,70.9 L526.5,57.6 L523.6,39.1ZM180.9,76.9 L209.0,51.4 L235.9,40.8 L255.6,41.5 L273.8,58.0 L271.1,63.2 L274.5,61.6 L275.8,66.0 L284.1,65.0 L286.1,50.7 L315.3,56.7 L331.7,55.8 L339.6,45.4 L339.1,37.5 L342.4,45.9 L405.7,4.8 L438.3,0.0 L448.4,4.4 L442.2,12.8 L449.8,7.5 L453.4,15.1 L459.5,4.5 L473.5,12.6 L470.1,22.1 L479.7,12.4 L523.0,33.0 L516.7,38.4 L524.2,58.8 L537.8,76.8 L522.4,91.6 L534.5,97.2 L542.1,94.9 L531.0,108.1 L529.4,125.0 L516.5,136.5 L517.5,147.0 L511.0,152.7 L459.1,161.2 L441.4,158.9 L437.1,173.7 L442.7,177.0 L439.3,187.3 L459.0,190.0 L456.9,201.4 L461.1,214.0 L458.6,223.9 L445.3,227.2 L440.9,240.2 L451.1,245.3 L457.8,241.5 L464.2,243.8 L478.6,257.8 L479.3,263.8 L472.0,269.9 L446.2,271.0 L441.0,279.7 L422.5,267.3 L411.2,268.1 L397.6,254.1 L385.2,251.7 L366.1,234.0 L349.4,166.9 L305.8,169.4 L304.4,139.4 L282.7,130.6 L276.9,101.1 L252.7,123.6 L233.8,123.7 L227.9,116.7 L206.6,121.3 L198.2,109.1 L192.5,108.0 L195.4,98.8 L189.1,96.4 L180.9,76.9Z" tabindex="0" role="button" aria-label="North region"/><text class="map-label" x="468" y="343">Central</text><text class="map-label" x="189" y="304">West</text><text class="map-label" x="737" y="253">East</text><text class="map-label" x="723" y="161">North-East</text><text class="map-label" x="390" y="114">North</text></svg>
+          <div class="map-legend">
+            <span><i></i> Dispatch hub / registered office</span>
+            <span><i class="sq"></i> Selected region</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== Process ===================== -->
+    <!-- ===================== Process =====================
+         Ordered list; the 01–04 numbers are generated by a CSS counter. -->
     <section class="section" id="process" aria-labelledby="process-title">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">How we work</span>
-          <h2 id="process-title">A simple, structured process from booking to delivery</h2>
+        <div class="section-head section-head-split reveal">
+          <div>
+            <p class="eyebrow">How booking works</p>
+            <h2 id="process-title">From request to proof of delivery.</h2>
+          </div>
+          <a class="btn btn-ghost" href="quote.html">Start step one <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
-
-        <ol class="process-list">
-          <li class="process-step reveal">
-            <span class="step-num">01</span>
-            <h3>Consultation</h3>
-            <p>We understand your route, timing and delivery goals.</p>
-          </li>
-          <li class="process-step reveal">
-            <span class="step-num">02</span>
-            <h3>Planning</h3>
-            <p>We prepare the most efficient transport plan and vehicle assignment.</p>
-          </li>
-          <li class="process-step reveal">
-            <span class="step-num">03</span>
-            <h3>Execution</h3>
-            <p>Your shipment or passengers move safely and on schedule.</p>
-          </li>
-          <li class="process-step reveal">
-            <span class="step-num">04</span>
-            <h3>Support</h3>
-            <p>Our team stays available throughout the trip and after completion.</p>
-          </li>
+        <ol class="process">
+          <li class="reveal"><h3>Request</h3><p>Use the instant quote, call or WhatsApp with your route, timing and load.</p><span class="process-time">About 1 minute</span></li>
+          <li class="reveal"><h3>Confirm</h3><p>Dispatch checks availability and sends a fixed quotation with your tracking number.</p><span class="process-time">Usually within 15 minutes</span></li>
+          <li class="reveal"><h3>Move</h3><p>A vetted driver and the right vehicle arrive on time. Follow progress live.</p><span class="process-time">Live status updates</span></li>
+          <li class="reveal"><h3>Close</h3><p>Photos and e-signature on completion, followed by a clear, GST-ready invoice.</p><span class="process-time">Same day</span></li>
         </ol>
       </div>
     </section>
 
-    <!-- ===================== Photo documentation preview ===================== -->
-    <section class="section" id="gallery-preview" aria-labelledby="gallery-preview-title">
+    <!-- ===================== Business accounts =====================
+         "Open a business account" links to contact.html?topic=account (preselects the form topic).
+         The quote over the photo is SAMPLE content. -->
+    <section class="section section-tint" id="business" aria-labelledby="business-title">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Photo documentation</span>
-          <h2 id="gallery-preview-title">See our operations in action</h2>
-          <p>A look at our fleet on the road, our warehouse floor and the teams who keep every job on schedule.</p>
-        </div>
-
-        <div class="photo-mosaic">
-          <a class="mosaic-item mosaic-feature reveal" href="gallery.html">
-            <img src="assets/images/photos/truck-singapore-street.jpg" alt="Delivery truck travelling through a Singapore street" width="1400" height="935" loading="lazy">
-            <span class="mosaic-caption"><small>Fleet</small>Daily deliveries across the city</span>
-          </a>
-          <a class="mosaic-item reveal" href="gallery.html">
-            <img src="assets/images/photos/warehouse-forklift.jpg" alt="Forklift moving stock between warehouse racks" width="1400" height="1318" loading="lazy">
-            <span class="mosaic-caption"><small>Warehouse</small>Racking &amp; storage</span>
-          </a>
-          <a class="mosaic-item reveal" href="gallery.html">
-            <img src="assets/images/photos/singapore-port.jpg" alt="Cargo terminal at the Port of Singapore" width="1400" height="933" loading="lazy">
-            <span class="mosaic-caption"><small>Operations</small>Port pickups</span>
-          </a>
-          <a class="mosaic-item reveal" href="gallery.html">
-            <img src="assets/images/photos/van-parcels.jpg" alt="Delivery van loaded with parcels ready for drop-off" width="1400" height="2100" loading="lazy">
-            <span class="mosaic-caption"><small>Fleet</small>Parcel deliveries</span>
-          </a>
-          <a class="mosaic-item reveal" href="gallery.html">
-            <img src="assets/images/photos/team-planning.jpg" alt="SwiftLink team planning routes in a meeting" width="1400" height="788" loading="lazy">
-            <span class="mosaic-caption"><small>Team</small>Route planning</span>
-          </a>
-        </div>
-
-        <div class="section-cta reveal">
-          <a class="btn btn-outline" href="gallery.html">View full gallery <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <div class="biz reveal">
+          <div class="biz-media">
+            <picture><source srcset="assets/images/photos/operations-meeting.webp" type="image/webp"><img src="assets/images/photos/operations-meeting.jpg" alt="SwiftLink operations team briefing with a client" width="1400" height="934" loading="lazy"></picture>
+            <p class="biz-quote">“We send 40 to 60 drops a week through one account manager and get one statement at month end.”<strong>Supply Chain Director, retail distribution (sample)</strong></p>
+          </div>
+          <div class="biz-body">
+            <p class="eyebrow">For businesses</p>
+            <h2 id="business-title">A SwiftLink business account.</h2>
+            <p>For companies that move goods or people every week. Free to open, no minimum volume.</p>
+            <ul class="biz-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-headset"/></svg><div><strong>Dedicated coordinator</strong><span>One person who knows your sites, loading bays and contacts.</span></div></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><div><strong>30-day credit terms</strong><span>Monthly statements with PO and cost-centre references.</span></div></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg><div><strong>Contract rates</strong><span>Fixed rates for recurring routes and volume tiers.</span></div></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><div><strong>Priority dispatch</strong><span>First call on vehicles during peak and festive periods.</span></div></li>
+            </ul>
+            <div class="biz-actions">
+              <a class="btn btn-navy" href="contact.html?topic=account">Open a business account <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-ghost" href="tel:+6567774599"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Talk to sales</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ===================== Testimonials =====================
-         SAMPLE CONTENT: replace names, roles and quotes with real, approved client feedback. -->
-    <section class="section section-tint" id="testimonials" aria-labelledby="testimonials-title">
+         SAMPLE CONTENT: replace with real, approved client feedback before going live. -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-title">
       <div class="container">
-        <div class="carousel-head reveal">
-          <div>
-            <span class="eyebrow">Client testimonials</span>
-            <h2 id="testimonials-title">Trusted by businesses across Singapore</h2>
-            <p>From event organisers to retail chains, here is what our clients say about working with SwiftLink.</p>
-          </div>
-          <div class="carousel-controls">
-            <button class="carousel-btn" type="button" data-carousel-prev aria-label="Previous testimonials"><svg class="icon" aria-hidden="true"><use href="#i-chev-left"/></svg></button>
-            <button class="carousel-btn" type="button" data-carousel-next aria-label="Next testimonials"><svg class="icon" aria-hidden="true"><use href="#i-chev-right"/></svg></button>
-          </div>
+        <div class="section-head reveal">
+          <p class="eyebrow">Client feedback</p>
+          <h2 id="testimonials-title">Trusted by operations teams across Singapore.</h2>
         </div>
-
-        <div class="carousel reveal" data-carousel>
-          <ul class="carousel-track" tabindex="0" aria-label="Client testimonials, scroll for more">
-            <li class="quote-card">
-              <span class="quote-tag">Corporate Charter</span>
-              <blockquote>“Reliable, professional, and always punctual. Their planning made our event transport seamless for over 300 guests.”</blockquote>
-              <div class="quote-person">
-                <span class="quote-avatar" aria-hidden="true">RT</span>
-                <span><strong>Rachel Tan</strong><small>Event Operations Manager, corporate events agency</small></span>
-              </div>
-            </li>
-            <li class="quote-card">
-              <span class="quote-tag">Goods Delivery</span>
-              <blockquote>“The team handled our delivery schedule with precision and clear communication throughout. Our stores were restocked on time, every time.”</blockquote>
-              <div class="quote-person">
-                <span class="quote-avatar" aria-hidden="true">ML</span>
-                <span><strong>Marcus Lee</strong><small>Supply Chain Director, retail distribution</small></span>
-              </div>
-            </li>
-            <li class="quote-card">
-              <span class="quote-tag">Office Move</span>
-              <blockquote>“We moved our entire office over one weekend and were ready to work on Monday morning. Everything arrived labelled and intact.”</blockquote>
-              <div class="quote-person">
-                <span class="quote-avatar" aria-hidden="true">PN</span>
-                <span><strong>Priya Nair</strong><small>Office Manager, professional services firm</small></span>
-              </div>
-            </li>
-            <li class="quote-card">
-              <span class="quote-tag">Point-to-Point</span>
-              <blockquote>“Our directors travel between meetings all day. SwiftLink’s drivers are always early, well-presented and discreet.”</blockquote>
-              <div class="quote-person">
-                <span class="quote-avatar" aria-hidden="true">DW</span>
-                <span><strong>Daniel Wong</strong><small>Executive Assistant, financial services</small></span>
-              </div>
-            </li>
-            <li class="quote-card">
-              <span class="quote-tag">Warehouse Support</span>
-              <blockquote>“Short-term storage during our renovation was a lifesaver. Stock was kept safe and delivered back exactly when we needed it.”</blockquote>
-              <div class="quote-person">
-                <span class="quote-avatar" aria-hidden="true">AR</span>
-                <span><strong>Aisyah Rahman</strong><small>Operations Lead, F&amp;B group</small></span>
-              </div>
-            </li>
-            <li class="quote-card">
-              <span class="quote-tag">Same-day Delivery</span>
-              <blockquote>“Urgent requests used to be stressful. Now it’s one call to the dispatch team and it’s handled, even late at night.”</blockquote>
-              <div class="quote-person">
-                <span class="quote-avatar" aria-hidden="true">KL</span>
-                <span><strong>Kenneth Lim</strong><small>Store Manager, lifestyle retail chain</small></span>
-              </div>
-            </li>
-          </ul>
-          <div class="carousel-dots" data-carousel-dots></div>
+        <div class="quotes">
+          <article class="quote quote-featured reveal">
+            <div class="quote-head"><span class="quote-stars" aria-label="5 out of 5"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span><span class="chip">Corporate charter</span></div>
+            <blockquote>“Their planning made transport for over 300 conference guests seamless. Every coach was early, and dispatch answered on the first ring at 6 a.m.”</blockquote>
+            <div class="quote-person"><span class="avatar" aria-hidden="true">RT</span><div><strong>Rachel Tan</strong><small>Event Operations Manager, corporate events agency</small></div></div>
+          </article>
+          <article class="quote reveal">
+            <div class="quote-head"><span class="quote-stars" aria-label="5 out of 5"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span><span class="chip">Office move</span></div>
+            <blockquote>“We moved the whole office over one weekend and were working on Monday. Everything arrived labelled and intact.”</blockquote>
+            <div class="quote-person"><span class="avatar" aria-hidden="true">PN</span><div><strong>Priya Nair</strong><small>Office Manager, professional services</small></div></div>
+          </article>
+          <article class="quote reveal">
+            <div class="quote-head"><span class="quote-stars" aria-label="5 out of 5"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span><span class="chip">Goods delivery</span></div>
+            <blockquote>“Clear communication throughout. Our stores were restocked on time, every time, with photos on every drop.”</blockquote>
+            <div class="quote-person"><span class="avatar" aria-hidden="true">ML</span><div><strong>Marcus Lee</strong><small>Supply Chain Director, retail</small></div></div>
+          </article>
+          <article class="quote reveal">
+            <div class="quote-head"><span class="quote-stars" aria-label="5 out of 5"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span><span class="chip">Point-to-point</span></div>
+            <blockquote>“Our directors move between meetings all day. The drivers are early, well-presented and discreet.”</blockquote>
+            <div class="quote-person"><span class="avatar" aria-hidden="true">DW</span><div><strong>Daniel Wong</strong><small>Executive Assistant, financial services</small></div></div>
+          </article>
+          <article class="quote reveal">
+            <div class="quote-head"><span class="quote-stars" aria-label="5 out of 5"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span><span class="chip">Warehouse</span></div>
+            <blockquote>“Short-term storage during our renovation was a lifesaver. Stock came back exactly when we needed it.”</blockquote>
+            <div class="quote-person"><span class="avatar" aria-hidden="true">AR</span><div><strong>Aisyah Rahman</strong><small>Operations Lead, F&amp;B group</small></div></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ===================== FAQ ===================== -->
-    <section class="section" id="faq" aria-labelledby="faq-title">
+    <!-- ===================== FAQ =====================
+         initFaq in main.js. To add a question, copy one <details class="faq-item"> and set
+         data-cat to booking | pricing | cover | ops (or add a new .faq-cat button with that value).
+         Keep answers consistent with terms.html and config.js (surcharges, cancellation, claims). -->
+    <section class="section section-tint" id="faq" aria-labelledby="faq-title">
       <div class="container faq-grid">
         <div class="faq-intro reveal">
-          <span class="eyebrow">FAQ</span>
-          <h2 id="faq-title">Common questions before booking</h2>
-          <p>Can’t find what you’re looking for? Our team is available 24/7.</p>
-          <a class="btn btn-outline" href="#contact">Ask a question</a>
-        </div>
-
-        <div class="faq-list reveal">
-          <details name="faq" open>
-            <summary>Do you provide same-day transport support?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <p>Yes. Urgent requests can often be arranged depending on vehicle availability and route requirements.</p>
-          </details>
-          <details name="faq">
-            <summary>Is your service available for events and conferences?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <p>Absolutely. We offer charter and transport packages for corporate events, conferences and private functions.</p>
-          </details>
-          <details name="faq">
-            <summary>Can you deliver across all parts of Singapore?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <p>Yes. We cover the whole island with scheduled and on-demand transport solutions.</p>
-          </details>
-          <details name="faq">
-            <summary>Are you licensed and insured?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <p>Yes. SwiftLink is a fully licensed and insured transport provider, LTA License No. LTA/TS/2023/01987.</p>
-          </details>
-          <details name="faq">
-            <summary>How do I get a quote?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
-            <p>Send your requirements through the form below, call +65 6777 4599, or email enquiry@swiftlink.com.sg. Our team will reply with a tailored quotation.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== Contact ===================== -->
-    <section class="section section-tint" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="contact-card">
-          <div class="contact-info">
-            <span class="eyebrow eyebrow-light">Contact us</span>
-            <h2 id="contact-title">Let’s build a transport solution that fits your needs.</h2>
-            <p>Reach out for a free quote and personalised support from our team.</p>
-
-            <ul class="contact-list">
-              <li>
-                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
-                <span><small>Phone (24/7)</small><a href="tel:+6567774599">+65 6777 4599</a></span>
-              </li>
-              <li>
-                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
-                <span><small>Email</small><a href="mailto:enquiry@swiftlink.com.sg">enquiry@swiftlink.com.sg</a></span>
-              </li>
-              <li>
-                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
-                <span><small>Registered office</small>456 Logistics Avenue, #03-22, Singapore 609876</span>
-              </li>
-            </ul>
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Answers before you book.</h2>
+          <p>Search or filter the most common questions. Still unsure? Dispatch is on call 24/7.</p>
+          <div class="field faq-search">
+            <label class="sr-only" for="faq-q">Search questions</label>
+            <div class="input-icon"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><input id="faq-q" type="search" placeholder="Search, e.g. insurance, Sunday, pallets" data-faq-search></div>
           </div>
+          <div class="faq-cats" role="group" aria-label="Filter by topic" data-faq-cats>
+            <button class="faq-cat" type="button" data-cat="all" aria-pressed="true">All</button>
+            <button class="faq-cat" type="button" data-cat="booking" aria-pressed="false">Booking</button>
+            <button class="faq-cat" type="button" data-cat="pricing" aria-pressed="false">Pricing</button>
+            <button class="faq-cat" type="button" data-cat="cover" aria-pressed="false">Insurance</button>
+            <button class="faq-cat" type="button" data-cat="ops" aria-pressed="false">Operations</button>
+          </div>
+        </div>
 
-          <!--
-            Form delivery:
-            - Leave action="" and the form opens the visitor's email app with the details pre-filled (sent to data-email).
-            - Or set action to a form service endpoint (e.g. https://formspree.io/f/xxxxxx) to submit in the background.
-          -->
-          <form class="contact-form" action="" method="POST" data-email="enquiry@swiftlink.com.sg" novalidate>
-            <h3>Request a free quote</h3>
-            <div class="form-row">
-              <div class="field">
-                <label for="f-name">Full name <span aria-hidden="true">*</span></label>
-                <input id="f-name" name="name" type="text" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="f-company">Company</label>
-                <input id="f-company" name="company" type="text" autocomplete="organization">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="f-email">Email <span aria-hidden="true">*</span></label>
-                <input id="f-email" name="email" type="email" autocomplete="email" required>
-              </div>
-              <div class="field">
-                <label for="f-phone">Phone</label>
-                <input id="f-phone" name="phone" type="tel" autocomplete="tel">
-              </div>
-            </div>
-            <div class="field">
-              <label for="f-service">Service required</label>
-              <select id="f-service" name="service">
-                <option>Goods Delivery</option>
-                <option>Corporate Charter</option>
-                <option>Point-to-Point</option>
-                <option>Warehouse Support</option>
-                <option>Other / Not sure</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="f-message">Tell us about your transport needs <span aria-hidden="true">*</span></label>
-              <textarea id="f-message" name="message" rows="4" required placeholder="Pickup and drop-off locations, date, time, volume or passengers…"></textarea>
-            </div>
-            <div class="hp-field" aria-hidden="true">
-              <label for="f-website">Leave this field empty</label>
-              <input id="f-website" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
-            </div>
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Send Request <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
+        <div class="reveal">
+          <div class="faq-list" data-faq-list>
+            <details class="faq-item" data-cat="booking" open>
+              <summary>Can you do same-day or urgent jobs?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <p>Yes. Urgent jobs can usually be picked up within 30 to 55 minutes depending on the region and vehicle. Same-day bookings within 3 hours carry a 20% urgency surcharge, shown in your quote.</p>
+            </details>
+            <details class="faq-item" data-cat="pricing">
+              <summary>How is the price calculated?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <p>Goods jobs are priced per trip by vehicle size and distance between regions. Charter and transfers are priced per hour with a minimum booking. Add-ons such as extra movers or tail-lift vehicles are itemised. The online figure is indicative; dispatch confirms a fixed written quotation.</p>
+            </details>
+            <details class="faq-item" data-cat="pricing">
+              <summary>Do you charge more at night, on Sundays or public holidays?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <p>Pickups between 22:00 and 07:00 carry a 25% after-hours surcharge, and Sundays or public holidays carry 15%. Both are applied automatically in the instant quote so there are no surprises.</p>
+            </details>
+            <details class="faq-item" data-cat="cover">
+              <summary>Are my goods insured during the move?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <p>Yes. Standard goods-in-transit cover is included on every job. For high-value items you can add enhanced cover for declared values up to S$20,000. SwiftLink is LTA-licensed under licence no. LTA/TS/2023/01987.</p>
+            </details>
+            <details class="faq-item" data-cat="ops">
+              <summary>How do I track my booking?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <p>Your confirmation includes a tracking number such as SL-240918. Enter it on the Track page to see live status, driver and vehicle details and the ETA. Proof of delivery with photos and signature appears there on completion.</p>
+            </details>
+            <details class="faq-item" data-cat="ops">
+              <summary>Which vehicle do I need?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <p>Use the vehicle matcher on the Services page: enter your cartons, pallets or passengers and it recommends the smallest vehicle that fits, so you don't pay for space you don't use.</p>
+            </details>
+            <details class="faq-item" data-cat="booking">
+              <summary>Can I set up monthly billing for my company?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <p>Yes. A business account gives you 30-day credit terms, monthly statements, contract rates for recurring routes and a dedicated coordinator. It's free to open.</p>
+            </details>
+            <details class="faq-item" data-cat="cover">
+              <summary>What happens if something is damaged?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <p>Pickup and drop-off photos are taken on every job. Report any issue within 48 hours and our team handles the claim with the insurer directly, keeping you updated until it's resolved.</p>
+            </details>
+            <details class="faq-item" data-cat="booking">
+              <summary>How do I cancel or reschedule?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <p>Contact dispatch by phone, WhatsApp or email. Changes made more than 24 hours before pickup are free. Later changes may incur a fee depending on whether the vehicle has already been dispatched.</p>
+            </details>
+          </div>
+          <p class="faq-empty" data-faq-empty hidden>No questions match that search. Try another word, or <a href="contact.html">ask our team directly</a>.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===================== Footer ===================== -->
+  <!-- Footer call to action (hidden on the quote page via CSS: body[data-page="quote"]) -->
+  <section class="footer-cta" aria-labelledby="footer-cta-title">
+    <div class="container footer-cta-inner">
+      <div>
+        <p class="eyebrow eyebrow-light">Ready when you are</p>
+        <h2 id="footer-cta-title">Get a price in under a minute.</h2>
+        <p>Tell us what's moving and where. You'll see an indicative price straight away, and dispatch confirms your booking, usually within 15 minutes.</p>
+      </div>
+      <div class="footer-cta-actions">
+        <a class="btn btn-primary btn-lg" href="quote.html">Start a quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-outline-light btn-lg" href="https://wa.me/6567774599" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp dispatch</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a class="brand brand-light" href="#top">
-          <img class="brand-mark" src="assets/images/favicon.svg" alt="" width="40" height="40">
+        <a class="brand brand-light" href="index.html" aria-label="SwiftLink home">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+  <rect width="40" height="40" rx="10" fill="currentColor"/>
+  <path d="M11 12.5 18.5 20 11 27.5" fill="none" stroke="var(--logo-ink)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+  <path d="M19.5 12.5 27 20l-7.5 7.5" fill="none" stroke="var(--logo-ink)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
           <span class="brand-text"><strong>SwiftLink</strong><small>Logistics &amp; Transport</small></span>
         </a>
-        <p>Licensed, insured and professional transport and logistics solutions across Singapore.</p>
-        <p class="footer-license">LTA License No.: LTA/TS/2023/01987</p>
+        <p>Licensed, insured transport and logistics across Singapore, run by one team that's reachable 24 hours a day.</p>
+        <!-- Licence number and registered office must stay visible on every page (brand requirement). -->
+        <dl class="footer-reg">
+          <div><dt>LTA Licence</dt><dd>LTA/TS/2023/01987</dd></div>
+          <div><dt>Registered office</dt><dd>456 Logistics Avenue, #03-22, Singapore 609876</dd></div>
+        </dl>
+        <ul class="footer-social" aria-label="Social media"><li><a href="#" target="_blank" rel="noopener" aria-label="SwiftLink on Linkedin"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li><li><a href="#" target="_blank" rel="noopener" aria-label="SwiftLink on Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li><li><a href="#" target="_blank" rel="noopener" aria-label="SwiftLink on Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li></ul>
       </div>
-
-      <nav class="footer-col" aria-label="Footer: company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="gallery.html">Photo gallery</a></li>
-          <li><a href="index.html#testimonials">Testimonials</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
-        </ul>
-      </nav>
 
       <nav class="footer-col" aria-label="Footer: services">
         <h3>Services</h3>
-        <ul>
-          <li><a href="index.html#services">Goods Delivery</a></li>
-          <li><a href="index.html#services">Corporate Charter</a></li>
-          <li><a href="index.html#services">Point-to-Point</a></li>
-          <li><a href="index.html#services">Warehouse Support</a></li>
-        </ul>
+        <ul><li><a href="services.html#delivery">Goods delivery</a></li><li><a href="services.html#charter">Corporate charter</a></li><li><a href="services.html#transfer">Point-to-point</a></li><li><a href="services.html#warehouse">Warehouse support</a></li><li><a href="services.html#fleet">Fleet guide</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Footer: customer tools">
+        <h3>Customer tools</h3>
+        <ul><li><a href="quote.html">Instant quote</a></li><li><a href="track.html">Track a shipment</a></li><li><a href="services.html#matcher">Vehicle matcher</a></li><li><a href="index.html#business">Business accounts</a></li><li><a href="index.html#faq">FAQ</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Footer: company">
+        <h3>Company</h3>
+        <ul><li><a href="about.html">About us</a></li><li><a href="careers.html">Careers</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li><li><a href="index.html#coverage">Coverage</a></li></ul>
       </nav>
 
       <div class="footer-col">
-        <h3>Contact</h3>
+        <h3>24/7 dispatch</h3>
         <ul class="footer-contact">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+6567774599">+65 6777 4599</a></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:enquiry@swiftlink.com.sg">enquiry@swiftlink.com.sg</a></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>456 Logistics Avenue, #03-22,<br>Singapore 609876</span></li>
+          <li><a href="tel:+6567774599"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>+65 6777 4599</a></li>
+          <li><a href="https://wa.me/6567774599" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a></li>
+          <li><a href="mailto:enquiry@swiftlink.com.sg"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>enquiry@swiftlink.com.sg</a></li>
         </ul>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <p>© <span data-year>2026</span> SwiftLink Logistics &amp; Transport Pte Ltd. All rights reserved.</p>
-      <p>Open 24 hours, 7 days a week</p>
+      <p>© <span data-year>2026</span> SwiftLink Logistics &amp; Transport Pte Ltd. UEN 201400000X.</p>
+      <ul class="footer-legal"><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li></ul>
     </div>
   </footer>
+
+  <!-- Mobile quick-action bar (visible below 720px only) -->
+  <nav class="mobile-bar" aria-label="Quick actions">
+    <a href="tel:+6567774599"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span>Call</span></a>
+    <a href="https://wa.me/6567774599" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><span>WhatsApp</span></a>
+    <a href="track.html"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span>Track</span></a>
+    <a class="mobile-bar-cta" href="quote.html"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><span>Quote</span></a>
+  </nav>
 
   <a class="back-to-top" href="#top" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></a>
 </body>

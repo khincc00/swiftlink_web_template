@@ -1,0 +1,61 @@
+<!--
+title: Track a Shipment | SwiftLink Logistics &amp; Transport
+description: Track your SwiftLink delivery, charter or transfer with your booking number. See live status, driver details, ETA and proof of delivery.
+nav: track
+script: track.js
+-->
+<!--
+  TRACKING — behaviour in assets/js/track.js. Results are rendered into
+  [data-track-output]. The demo numbers below match config.js → shipments;
+  remove the .sample-ids block once tracking is connected to the live system.
+-->
+    <section class="page-hero page-hero-plain" aria-labelledby="page-title">
+      <div class="container page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Track</li></ol></nav>
+        <h1 id="page-title">Track a shipment</h1>
+        <p>Enter the booking number from your confirmation SMS or email to see live status, your driver and the latest ETA.</p>
+        <form class="track-search" data-track-form>
+          <div class="field">
+            <label class="sr-only" for="t-id">Booking or tracking number</label>
+            <div class="input-icon">{{icon:search}}<input id="t-id" name="id" placeholder="SL-240918" autocomplete="off" spellcheck="false" required></div>
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit">Track {{icon:arrow}}</button>
+        </form>
+        <div class="sample-ids" aria-label="Try a sample tracking number">
+          <span>Try a demo:</span>
+          <button type="button" data-fill="SL-240918">SL-240918</button>
+          <button type="button" data-fill="SL-240917">SL-240917</button>
+          <button type="button" data-fill="SL-240920">SL-240920</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: clamp(2rem, 5vw, 3.5rem)" aria-label="Tracking result">
+      <div class="container">
+        <div data-track-output aria-live="polite">
+          <div class="track-empty">
+            {{icon:route}}
+            <h2>Your shipment details will appear here</h2>
+            <p>Use your booking number, or try one of the demo numbers above to see how tracking works.</p>
+          </div>
+        </div>
+
+        <div class="track-help">
+          <article class="bento-card">
+            <span class="bento-icon">{{icon:file}}</span>
+            <h3>Where's my number?</h3>
+            <p>It starts with “SL-” and is in your booking confirmation by SMS and email.</p>
+          </article>
+          <article class="bento-card">
+            <span class="bento-icon">{{icon:whatsapp}}</span>
+            <h3>Need to change something?</h3>
+            <p>Message dispatch on <a href="https://wa.me/{{c:whatsapp}}" target="_blank" rel="noopener">WhatsApp</a> with your number. Changes 24 h ahead are free.</p>
+          </article>
+          <article class="bento-card">
+            <span class="bento-icon">{{icon:camera}}</span>
+            <h3>Proof of delivery</h3>
+            <p>Delivery photos and the recipient's e-signature appear here once the job is completed.</p>
+          </article>
+        </div>
+      </div>
+    </section>

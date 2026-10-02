@@ -1,0 +1,172 @@
+<!--
+title: Instant Quote | SwiftLink Logistics &amp; Transport
+description: Get an indicative price for delivery, charter, transfers or warehouse storage in Singapore in under a minute, then send your request to SwiftLink dispatch.
+nav: quote
+script: quote.js
+-->
+<!--
+  QUOTE WIZARD — behaviour lives in assets/js/quote.js, prices in assets/js/config.js.
+  • Each step is a <fieldset class="step" data-step="N">. To add a step, add a
+    fieldset + a <li> in [data-steps], and raise `total` in quote.js.
+  • Elements with data-* attributes are filled or read by quote.js; keep them
+    when restyling. Inline style="border:0…" only resets the fieldset look.
+-->
+    <section class="page-hero page-hero-plain" aria-labelledby="page-title">
+      <div class="container page-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Instant quote</li></ol></nav>
+        <h1 id="page-title">Instant quote</h1>
+        <p>Five short steps. Your indicative price updates as you go, and dispatch confirms a fixed quotation, usually within 15 minutes.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: clamp(2rem, 5vw, 3.5rem)" aria-label="Quote form">
+      <div class="container wizard" data-wizard>
+        <form class="wizard-main" novalidate data-wizard-form data-email="{{c:email}}">
+          <ol class="wizard-steps" data-steps>
+            <li class="is-current"><span class="num">1</span>Service</li>
+            <li><span class="num">2</span>Details</li>
+            <li><span class="num">3</span>Schedule</li>
+            <li><span class="num">4</span>Extras</li>
+            <li><span class="num">5</span>Review</li>
+          </ol>
+          <div class="wizard-progress" aria-hidden="true"><span data-progress></span></div>
+
+          <div class="wizard-body">
+            <!-- Step 1 · Service. Radio values must match the keys of config.js → services. -->
+            <fieldset class="step" data-step="1" style="border:0;margin:0;padding:0">
+              <legend class="sr-only">Step 1 of 5: Service</legend>
+              <div class="step-head"><h2>What can we help you move?</h2><p>Pick the closest match. You can change it later.</p></div>
+              <div class="choice-grid">
+                <label class="choice"><input type="radio" name="service" value="delivery" checked><span class="choice-icon">{{icon:box}}</span><span><strong>Goods delivery</strong><small>Parcels, restocks, office or home moves</small></span><span class="choice-check"></span></label>
+                <label class="choice"><input type="radio" name="service" value="charter"><span class="choice-icon">{{icon:bus}}</span><span><strong>Corporate charter</strong><small>Minibus or coach for groups and events</small></span><span class="choice-check"></span></label>
+                <label class="choice"><input type="radio" name="service" value="transfer"><span class="choice-icon">{{icon:car}}</span><span><strong>Point-to-point</strong><small>Executive sedan or MPV, airport runs</small></span><span class="choice-check"></span></label>
+                <label class="choice"><input type="radio" name="service" value="warehouse"><span class="choice-icon">{{icon:warehouse}}</span><span><strong>Warehouse support</strong><small>Pallet storage by the week</small></span><span class="choice-check"></span></label>
+              </div>
+            </fieldset>
+
+            <!-- Step 2 · Details. [data-s2-vehicles] is filled by buildStep2() in quote.js;
+                 the storage / hours blocks are shown or hidden per service type. -->
+            <fieldset class="step" data-step="2" hidden style="border:0;margin:0;padding:0">
+              <legend class="sr-only">Step 2 of 5: Details</legend>
+              <div class="step-head"><h2 data-s2-title>Choose a vehicle</h2><p data-s2-sub>Not sure? <a href="services.html#matcher">Use the vehicle matcher</a>.</p></div>
+              <div data-s2-vehicles class="choice-grid"></div>
+
+              <div data-s2-storage hidden>
+                <div class="form-grid">
+                  <div class="field"><label for="w-pallets">Number of pallets</label><select id="w-pallets" name="pallets"></select></div>
+                  <div class="field"><label for="w-weeks">Storage period</label><select id="w-weeks" name="weeks"></select></div>
+                </div>
+              </div>
+
+              <div data-s2-hours hidden>
+                <p class="sub-label">Duration</p>
+                <div class="field" style="max-width:280px"><label for="w-hours">Hours needed</label><select id="w-hours" name="hours"></select><span class="field-hint" data-min-hours></span></div>
+              </div>
+
+              <p class="sub-label" data-route-label>Route</p>
+              <div class="form-grid" data-s2-route>
+                <div class="field"><label for="w-from">Pickup region <span class="req">*</span></label><select id="w-from" name="from" data-region-select required></select></div>
+                <div class="field"><label for="w-to">Drop-off region <span class="req">*</span></label><select id="w-to" name="to" data-region-select required></select></div>
+                <div class="field"><label for="w-from-addr">Pickup address or postal code</label><input id="w-from-addr" name="fromAddress" autocomplete="off" placeholder="e.g. 609876"></div>
+                <div class="field"><label for="w-to-addr">Drop-off address or postal code</label><input id="w-to-addr" name="toAddress" autocomplete="off" placeholder="e.g. Tampines Hub"></div>
+              </div>
+            </fieldset>
+
+            <!-- Step 3 · Schedule. Surcharges (urgent, after-hours, Sunday / public holiday)
+                 are applied by SL.calc(). The holiday box is ticked automatically for
+                 dates listed in config.js → publicHolidays. -->
+            <fieldset class="step" data-step="3" hidden style="border:0;margin:0;padding:0">
+              <legend class="sr-only">Step 3 of 5: Schedule</legend>
+              <div class="step-head"><h2>When do you need us?</h2><p>Night, Sunday and urgent surcharges are applied automatically.</p></div>
+              <div class="form-grid">
+                <div class="field"><label for="w-date">Date <span class="req">*</span></label><input id="w-date" name="date" type="date" required><span class="field-error" data-error-for="date"></span></div>
+                <div class="field"><label for="w-time">Pickup time <span class="req">*</span></label><input id="w-time" name="time" type="time" step="900" value="10:00" required><span class="field-error" data-error-for="time"></span></div>
+              </div>
+              <p class="sub-label">Priority</p>
+              <div class="toggle-row">
+                <label class="toggle-pill"><input type="radio" name="priority" value="standard" checked><span>Standard</span></label>
+                <label class="toggle-pill"><input type="radio" name="priority" value="urgent"><span>{{icon:bolt}} Urgent, within 3 hours</span></label>
+              </div>
+              <label class="toggle-pill" style="display:inline-block;margin-top:1rem"><input type="checkbox" name="holiday" value="yes"><span>{{icon:calendar}} The date is a public holiday<span data-holiday-name></span></span></label>
+              <p class="sub-label">Frequency</p>
+              <div class="toggle-row">
+                <label class="toggle-pill"><input type="radio" name="frequency" value="One-off" checked><span>One-off</span></label>
+                <label class="toggle-pill"><input type="radio" name="frequency" value="Weekly"><span>Weekly</span></label>
+                <label class="toggle-pill"><input type="radio" name="frequency" value="Daily"><span>Daily</span></label>
+              </div>
+              <p class="inline-note" data-surcharge-note hidden>{{icon:info}}<span></span></p>
+            </fieldset>
+
+            <!-- Step 4 · Extras. [data-addons] is filled from config.js → addons. -->
+            <fieldset class="step" data-step="4" hidden style="border:0;margin:0;padding:0">
+              <legend class="sr-only">Step 4 of 5: Extras</legend>
+              <div class="step-head"><h2>Any extras?</h2><p>Optional. Everything is itemised in your summary.</p></div>
+              <div class="choice-grid" data-addons></div>
+              <div class="field" style="margin-top:1.5rem">
+                <label for="w-notes">Anything we should know?</label>
+                <textarea id="w-notes" name="notes" placeholder="Loading bay access, lift bookings, fragile items, flight number, guest count…"></textarea>
+              </div>
+            </fieldset>
+
+            <!-- Step 5 · Contact details, consent and review. Validated in send() (quote.js). -->
+            <fieldset class="step" data-step="5" hidden style="border:0;margin:0;padding:0">
+              <legend class="sr-only">Step 5 of 5: Review and send</legend>
+              <div class="step-head"><h2>Your details and review</h2><p>We reply with a fixed quotation. No payment needed now.</p></div>
+              <div class="form-grid">
+                <div class="field"><label for="w-name">Full name <span class="req">*</span></label><input id="w-name" name="name" autocomplete="name" required><span class="field-error" data-error-for="name"></span></div>
+                <div class="field"><label for="w-company">Company</label><input id="w-company" name="company" autocomplete="organization"></div>
+                <div class="field"><label for="w-email">Email <span class="req">*</span></label><input id="w-email" name="email" type="email" autocomplete="email" required><span class="field-error" data-error-for="email"></span></div>
+                <div class="field"><label for="w-phone">Mobile <span class="req">*</span></label><input id="w-phone" name="phone" type="tel" autocomplete="tel" placeholder="+65" required><span class="field-error" data-error-for="phone"></span></div>
+              </div>
+              <!-- PDPA consent (required). Wording and link target: privacy.html -->
+              <div class="field consent">
+                <label class="consent-label"><input type="checkbox" name="consent" value="yes" required data-required-msg="Please agree so we can reply to your request."><span>I agree to SwiftLink using my details to prepare this quotation and contact me about it, as described in the <a href="privacy.html" target="_blank">privacy policy</a>.</span></label>
+                <span class="field-error" data-error-for="consent"></span>
+              </div>
+              <!-- Honeypot: invisible to people; if a bot fills it the request is dropped. -->
+              <div class="hp-field" aria-hidden="true"><label for="w-website">Leave this empty</label><input id="w-website" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+              <p class="sub-label">Review</p>
+              <dl class="review" data-review></dl>
+              <div class="send-grid">
+                <button class="btn btn-primary btn-lg" type="submit" data-send="email">{{icon:mail}} <span data-send-label>Send request by email</span></button>
+                <button class="btn btn-ghost btn-lg" type="button" data-send="whatsapp">{{icon:whatsapp}} Send via WhatsApp</button>
+              </div>
+              <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+            </fieldset>
+
+            <!-- Done panel, shown after sending. [data-done-msg] text is replaced when a form endpoint is used. -->
+            <div class="done" data-done hidden tabindex="-1">
+              <div class="done-icon">{{icon:check}}</div>
+              <h2>Request ready for dispatch</h2>
+              <p data-done-msg>Your email or WhatsApp app has opened with everything filled in. Once sent, dispatch replies with a fixed quotation, usually within 15 minutes.</p>
+              <div class="ref"><span class="muted" style="font-size:var(--text-xs)">Your reference</span><strong class="mono" data-ref>SL-Q00000</strong><button type="button" data-copy-ref aria-label="Copy reference">{{icon:copy}}</button></div>
+              <div class="page-hero-actions" style="justify-content:center">
+                <a class="btn btn-ghost" href="quote.html">Start a new quote</a>
+                <a class="btn btn-navy" href="tel:{{c:tel}}">{{icon:phone}} Call dispatch</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="wizard-nav" data-wizard-nav>
+            <button class="btn btn-ghost" type="button" data-prev>{{icon:chev-left}} Back</button>
+            <span class="nav-price" aria-hidden="true"><small>Indicative</small><strong data-nav-price>S$—</strong></span>
+            <button class="btn btn-navy" type="button" data-next>Continue {{icon:arrow}}</button>
+          </div>
+        </form>
+
+        <!-- Live price summary (sticky on desktop). Filled by render() in quote.js. -->
+        <aside class="summary" aria-label="Quote summary">
+          <div class="summary-head" aria-live="polite">
+            <small>Indicative price</small>
+            <strong class="summary-total" data-sum-total>S$—</strong>
+            <p data-sum-basis>Before GST · confirmed by dispatch</p>
+          </div>
+          <ul class="summary-lines" data-sum-lines></ul>
+          <div class="summary-breakdown" data-sum-breakdown></div>
+          <div class="summary-foot">
+            <span>{{icon:shield}} Standard goods-in-transit and passenger cover included.</span>
+            <a href="tel:{{c:tel}}">{{icon:phone}} Prefer to talk? {{c:phone}}</a>
+          </div>
+        </aside>
+      </div>
+    </section>

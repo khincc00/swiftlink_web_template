@@ -1,0 +1,407 @@
+<!--
+title: SwiftLink Logistics &amp; Transport | Licensed Transport Partner in Singapore
+description: LTA-licensed, insured transport and logistics in Singapore. Instant quotes, live shipment tracking, goods delivery, corporate charter and warehousing, 24/7.
+nav: home
+-->
+<!--
+  HOME PAGE — section order: hero (+ quick console) · trust strip · services ·
+  why us (bento) · coverage map · booking process · business accounts ·
+  testimonials · FAQ. The footer CTA, header and footer come from _tools/build.py.
+  Sections are independent: delete or reorder a <section> without touching JS.
+-->
+    <!-- ===================== Hero =====================
+         Background photo: .hero-media (decorative, alt=""). Headline <em> is tinted teal.
+         The four .hero-proof figures are SAMPLE claims; confirm them with the client. -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media"><img src="assets/images/photos/singapore-port.jpg" alt="" width="1400" height="933" fetchpriority="high"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-light">LTA-licensed transport partner · Singapore</p>
+          <h1 id="hero-title">Goods and people, moved <em>on time</em>, island-wide.</h1>
+          <p class="hero-lead">One licensed, insured team for deliveries, corporate charter, transfers and short-term warehousing. Get a price in seconds and track every job live.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="quote.html">Get an instant quote {{icon:arrow}}</a>
+            <a class="btn btn-outline-light btn-lg" href="services.html">Explore services</a>
+          </div>
+          <ul class="hero-proof" aria-label="SwiftLink at a glance">
+            <li><strong>12+ yrs</strong><span>serving Singapore</span></li>
+            <li><strong>24/7</strong><span>dispatch &amp; support</span></li>
+            <li><strong>15 min</strong><span>typical booking confirmation</span></li>
+            <li><strong>5 / 5</strong><span>regions covered</span></li>
+          </ul>
+        </div>
+
+        <!-- Quick console: estimate + tracking (initConsole in main.js).
+             The service buttons (data-service) must match config.js → services.
+             Selects are filled by JS; the estimate uses the same SL.calc() as quote.html. -->
+        <div class="console" data-console>
+          <div class="console-tabs" role="tablist" aria-label="Quick tools">
+            <button class="console-tab" role="tab" id="tab-est" aria-controls="panel-est" aria-selected="true" type="button">{{icon:tag}} Instant estimate</button>
+            <button class="console-tab" role="tab" id="tab-trk" aria-controls="panel-trk" aria-selected="false" tabindex="-1" type="button">{{icon:search}} Track shipment</button>
+          </div>
+
+          <div class="console-panel" role="tabpanel" id="panel-est" aria-labelledby="tab-est">
+            <form data-quick-quote>
+              <p class="console-title">What do you need moved?</p>
+              <div class="seg" role="group" aria-label="Service">
+                <button class="seg-btn" type="button" data-service="delivery" aria-pressed="true">{{icon:box}}Delivery</button>
+                <button class="seg-btn" type="button" data-service="charter" aria-pressed="false">{{icon:bus}}Charter</button>
+                <button class="seg-btn" type="button" data-service="transfer" aria-pressed="false">{{icon:car}}Transfer</button>
+                <button class="seg-btn" type="button" data-service="warehouse" aria-pressed="false">{{icon:warehouse}}Storage</button>
+              </div>
+              <div class="console-grid">
+                <div class="field" data-qq-route>
+                  <label for="qq-from">Pickup region</label>
+                  <select id="qq-from" name="from" data-region-select></select>
+                </div>
+                <div class="field" data-qq-route>
+                  <label for="qq-to">Drop-off region</label>
+                  <select id="qq-to" name="to" data-region-select></select>
+                </div>
+                <div class="field field-full" data-qq-vehicle>
+                  <label for="qq-vehicle">Vehicle</label>
+                  <select id="qq-vehicle" name="vehicle"></select>
+                </div>
+                <div class="field" data-qq-hours hidden>
+                  <label for="qq-hours">Hours</label>
+                  <select id="qq-hours" name="hours"></select>
+                </div>
+                <div class="field" data-qq-pallets hidden>
+                  <label for="qq-pallets">Pallets</label>
+                  <select id="qq-pallets" name="pallets"></select>
+                </div>
+                <div class="field" data-qq-weeks hidden>
+                  <label for="qq-weeks">Weeks</label>
+                  <select id="qq-weeks" name="weeks"></select>
+                </div>
+              </div>
+              <div class="estimate" aria-live="polite">
+                <div>
+                  <small>Indicative price</small>
+                  <span class="estimate-value" data-qq-total>S$—</span>
+                </div>
+                <div class="estimate-note"><small data-qq-basis>per trip, before add-ons</small></div>
+              </div>
+              <div class="console-actions">
+                <a class="btn btn-navy" href="quote.html" data-qq-continue>Continue to full quote {{icon:arrow}}</a>
+                <a class="btn btn-ghost" href="tel:{{c:tel}}" aria-label="Call dispatch">{{icon:phone}}</a>
+              </div>
+              <p class="console-foot">{{icon:info}} Final price is confirmed by dispatch. No payment needed to request.</p>
+            </form>
+          </div>
+
+          <div class="console-panel" role="tabpanel" id="panel-trk" aria-labelledby="tab-trk" hidden>
+            <form action="track.html" method="get" data-quick-track>
+              <p class="console-title">Where's my shipment?</p>
+              <div class="field">
+                <label for="qt-id">Booking or tracking number</label>
+                <div class="input-icon">{{icon:search}}<input id="qt-id" name="id" class="mono" placeholder="e.g. SL-240918" autocomplete="off" required></div>
+              </div>
+              <div class="sample-ids" aria-label="Try a sample tracking number">
+                <button type="button" data-fill="SL-240918">SL-240918</button>
+                <button type="button" data-fill="SL-240917">SL-240917</button>
+                <button type="button" data-fill="SL-240920">SL-240920</button>
+              </div>
+              <div class="console-actions">
+                <button class="btn btn-navy" type="submit">Track now {{icon:arrow}}</button>
+                <a class="btn btn-ghost" href="https://wa.me/{{c:whatsapp}}" target="_blank" rel="noopener" aria-label="Ask dispatch on WhatsApp">{{icon:whatsapp}}</a>
+              </div>
+              <p class="console-foot">{{icon:info}} You'll find the number in your booking confirmation SMS or email.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Trust strip =====================
+         Four credentials. {{c:licence}} comes from COMPANY in _tools/build.py. -->
+    <section class="trust" aria-label="Credentials">
+      <div class="container trust-inner">
+        <div class="trust-item"><span class="trust-icon">{{icon:license}}</span><div><strong>LTA licensed</strong><span>Licence {{c:licence}}</span></div></div>
+        <div class="trust-item"><span class="trust-icon">{{icon:shield}}</span><div><strong>Fully insured</strong><span>Goods-in-transit &amp; passenger cover</span></div></div>
+        <div class="trust-item"><span class="trust-icon">{{icon:clock}}</span><div><strong>Open 24/7</strong><span>Including public holidays</span></div></div>
+        <div class="trust-item"><span class="trust-icon">{{icon:camera}}</span><div><strong>Proof of delivery</strong><span>Photos &amp; e-signature on every job</span></div></div>
+      </div>
+    </section>
+
+    <!-- ===================== Services =====================
+         Four cards on a 12-column grid (spans 7/5/5/7, see .service-card:nth-child in CSS).
+         "From S$…" prices are typed here; keep them in line with config.js → vehicles / storage. -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head section-head-split reveal">
+          <div>
+            <p class="eyebrow">What we move</p>
+            <h2 id="services-title">Four service lines, one accountable team.</h2>
+          </div>
+          <a class="btn btn-ghost" href="services.html">Compare all services {{icon:arrow}}</a>
+        </div>
+
+        <div class="services-grid">
+          <a class="service-card reveal" href="services.html#delivery">
+            <div class="service-media"><img src="assets/images/photos/van-parcels.jpg" alt="Delivery van loaded with parcels" width="1400" height="2100" loading="lazy" style="object-position:center 60%"></div>
+            <div class="service-body">
+              <div class="service-top"><span class="chip chip-accent">{{icon:box}} Goods delivery</span><span class="service-num">01</span></div>
+              <h3>Same-day and scheduled delivery</h3>
+              <p>Parcels, retail restocks, B2B drops and office moves, with vans to 24 ft lorries and trained movers.</p>
+              <div class="service-meta"><span class="service-price">From <strong>S$55</strong> per trip</span><span class="service-arrow">{{icon:arrow}}</span></div>
+            </div>
+          </a>
+          <a class="service-card reveal" href="services.html#charter">
+            <div class="service-media"><img src="assets/images/photos/chauffeur-driving.jpg" alt="Professional driver at the wheel of a charter vehicle" width="1400" height="2097" loading="lazy" style="object-position:center 35%"></div>
+            <div class="service-body">
+              <div class="service-top"><span class="chip chip-accent">{{icon:bus}} Corporate charter</span><span class="service-num">02</span></div>
+              <h3>Coaches for events and teams</h3>
+              <p>Minibuses and 40-seat coaches for conferences, roadshows and site visits.</p>
+              <div class="service-meta"><span class="service-price">From <strong>S$90</strong> per hour</span><span class="service-arrow">{{icon:arrow}}</span></div>
+            </div>
+          </a>
+          <a class="service-card reveal" href="services.html#transfer">
+            <div class="service-media"><img src="assets/images/photos/executive-vehicle.jpg" alt="Executive vehicle for door-to-door transfers" width="1400" height="933" loading="lazy"></div>
+            <div class="service-body">
+              <div class="service-top"><span class="chip chip-accent">{{icon:car}} Point-to-point</span><span class="service-num">03</span></div>
+              <h3>Executive and airport transfers</h3>
+              <p>Door-to-door sedans and MPVs with flight monitoring and meet-and-greet.</p>
+              <div class="service-meta"><span class="service-price">From <strong>S$60</strong> per hour</span><span class="service-arrow">{{icon:arrow}}</span></div>
+            </div>
+          </a>
+          <a class="service-card reveal" href="services.html#warehouse">
+            <div class="service-media"><img src="assets/images/photos/warehouse-forklift.jpg" alt="Forklift moving stock between warehouse racks" width="1400" height="1318" loading="lazy"></div>
+            <div class="service-body">
+              <div class="service-top"><span class="chip chip-accent">{{icon:warehouse}} Warehouse support</span><span class="service-num">04</span></div>
+              <h3>Short-term storage and distribution</h3>
+              <p>Pallet storage by the week in the West, with pick, pack and onward delivery handled by the same team.</p>
+              <div class="service-meta"><span class="service-price">From <strong>S$14</strong> per pallet / week</span><span class="service-arrow">{{icon:arrow}}</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Why =====================
+         Bento grid: .bento-a is the large navy tile (photo set in CSS), b–f are the smaller tiles. -->
+    <section class="section section-tint" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Why SwiftLink</p>
+          <h2 id="why-title">The details that keep your schedule intact.</h2>
+          <p>Licensing and insurance are the baseline. What clients stay for is how predictable every job feels.</p>
+        </div>
+        <div class="bento">
+          <article class="bento-card bento-a reveal">
+            <span class="bento-icon">{{icon:clock}}</span>
+            <span class="bento-stat">24/7</span>
+            <h3>A real dispatcher, any hour.</h3>
+            <p>Call or WhatsApp at 3 a.m. on a public holiday and you'll reach someone who can assign a vehicle, not a voicemail.</p>
+          </article>
+          <article class="bento-card bento-b reveal">
+            <span class="bento-icon">{{icon:tag}}</span>
+            <h3>Prices you can plan around</h3>
+            <p>Instant indicative rates online, then a fixed written quotation. Surcharges for urgency, after-hours and holidays are shown upfront.</p>
+          </article>
+          <article class="bento-card bento-c reveal">
+            <span class="bento-icon">{{icon:route}}</span>
+            <h3>Live tracking on every job</h3>
+            <p>Each booking gets a tracking number with status updates, driver details and ETA you can share with your team.</p>
+          </article>
+          <article class="bento-card bento-d reveal">
+            <span class="bento-icon">{{icon:shield}}</span>
+            <h3>Licensed &amp; insured</h3>
+            <p>LTA-licensed operator with goods-in-transit and passenger liability cover.</p>
+          </article>
+          <article class="bento-card bento-e reveal">
+            <span class="bento-icon">{{icon:camera}}</span>
+            <h3>Proof of delivery</h3>
+            <p>Photos at pickup and drop-off plus an e-signature, sent to you automatically.</p>
+          </article>
+          <article class="bento-card bento-f reveal">
+            <span class="bento-icon">{{icon:file}}</span>
+            <h3>Clean paperwork</h3>
+            <p>GST-ready invoices, PO references and monthly statements for account clients.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Coverage =====================
+         initMap in main.js: {{sgmap}} inserts _src/sgmap.svg; region tabs, ETA, hub and
+         areas are generated from config.js → regions. Hub pin positions are set in initMap. -->
+    <section class="section coverage" id="coverage" aria-labelledby="coverage-title">
+      <div class="container coverage-grid">
+        <div class="coverage-copy reveal">
+          <p class="eyebrow eyebrow-light">Coverage</p>
+          <h2 id="coverage-title">Every region of Singapore, with typical urgent response times.</h2>
+          <p>Select a region on the map to see the areas we serve most and how quickly a vehicle usually reaches you for same-day jobs.</p>
+          <div class="region-tabs" role="group" aria-label="Choose a region" data-region-tabs></div>
+          <div class="region-panel" aria-live="polite" data-region-panel>
+            <div class="region-panel-head">
+              <h3 data-rp-name>Central</h3>
+              <p class="region-eta">Urgent pickup in <strong data-rp-eta>30–45 min</strong></p>
+            </div>
+            <p class="region-hub" data-rp-hub>Main dispatch hub</p>
+            <ul class="region-areas" data-rp-areas></ul>
+          </div>
+        </div>
+        <div class="map-wrap reveal" data-sg-map>
+          {{sgmap}}
+          <div class="map-legend">
+            <span><i></i> Dispatch hub / registered office</span>
+            <span><i class="sq"></i> Selected region</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Process =====================
+         Ordered list; the 01–04 numbers are generated by a CSS counter. -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head section-head-split reveal">
+          <div>
+            <p class="eyebrow">How booking works</p>
+            <h2 id="process-title">From request to proof of delivery.</h2>
+          </div>
+          <a class="btn btn-ghost" href="quote.html">Start step one {{icon:arrow}}</a>
+        </div>
+        <ol class="process">
+          <li class="reveal"><h3>Request</h3><p>Use the instant quote, call or WhatsApp with your route, timing and load.</p><span class="process-time">About 1 minute</span></li>
+          <li class="reveal"><h3>Confirm</h3><p>Dispatch checks availability and sends a fixed quotation with your tracking number.</p><span class="process-time">Usually within 15 minutes</span></li>
+          <li class="reveal"><h3>Move</h3><p>A vetted driver and the right vehicle arrive on time. Follow progress live.</p><span class="process-time">Live status updates</span></li>
+          <li class="reveal"><h3>Close</h3><p>Photos and e-signature on completion, followed by a clear, GST-ready invoice.</p><span class="process-time">Same day</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== Business accounts =====================
+         "Open a business account" links to contact.html?topic=account (preselects the form topic).
+         The quote over the photo is SAMPLE content. -->
+    <section class="section section-tint" id="business" aria-labelledby="business-title">
+      <div class="container">
+        <div class="biz reveal">
+          <div class="biz-media">
+            <img src="assets/images/photos/operations-meeting.jpg" alt="SwiftLink operations team briefing with a client" width="1400" height="934" loading="lazy">
+            <p class="biz-quote">“We send 40 to 60 drops a week through one account manager and get one statement at month end.”<strong>Supply Chain Director, retail distribution (sample)</strong></p>
+          </div>
+          <div class="biz-body">
+            <p class="eyebrow">For businesses</p>
+            <h2 id="business-title">A SwiftLink business account.</h2>
+            <p>For companies that move goods or people every week. Free to open, no minimum volume.</p>
+            <ul class="biz-list">
+              <li>{{icon:headset}}<div><strong>Dedicated coordinator</strong><span>One person who knows your sites, loading bays and contacts.</span></div></li>
+              <li>{{icon:file}}<div><strong>30-day credit terms</strong><span>Monthly statements with PO and cost-centre references.</span></div></li>
+              <li>{{icon:tag}}<div><strong>Contract rates</strong><span>Fixed rates for recurring routes and volume tiers.</span></div></li>
+              <li>{{icon:bolt}}<div><strong>Priority dispatch</strong><span>First call on vehicles during peak and festive periods.</span></div></li>
+            </ul>
+            <div class="biz-actions">
+              <a class="btn btn-navy" href="contact.html?topic=account">Open a business account {{icon:arrow}}</a>
+              <a class="btn btn-ghost" href="tel:{{c:tel}}">{{icon:phone}} Talk to sales</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Testimonials =====================
+         SAMPLE CONTENT: replace with real, approved client feedback before going live. -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Client feedback</p>
+          <h2 id="testimonials-title">Trusted by operations teams across Singapore.</h2>
+        </div>
+        <div class="quotes">
+          <article class="quote quote-featured reveal">
+            <div class="quote-head"><span class="quote-stars" aria-label="5 out of 5">{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}</span><span class="chip">Corporate charter</span></div>
+            <blockquote>“Their planning made transport for over 300 conference guests seamless. Every coach was early, and dispatch answered on the first ring at 6 a.m.”</blockquote>
+            <div class="quote-person"><span class="avatar" aria-hidden="true">RT</span><div><strong>Rachel Tan</strong><small>Event Operations Manager, corporate events agency</small></div></div>
+          </article>
+          <article class="quote reveal">
+            <div class="quote-head"><span class="quote-stars" aria-label="5 out of 5">{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}</span><span class="chip">Office move</span></div>
+            <blockquote>“We moved the whole office over one weekend and were working on Monday. Everything arrived labelled and intact.”</blockquote>
+            <div class="quote-person"><span class="avatar" aria-hidden="true">PN</span><div><strong>Priya Nair</strong><small>Office Manager, professional services</small></div></div>
+          </article>
+          <article class="quote reveal">
+            <div class="quote-head"><span class="quote-stars" aria-label="5 out of 5">{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}</span><span class="chip">Goods delivery</span></div>
+            <blockquote>“Clear communication throughout. Our stores were restocked on time, every time, with photos on every drop.”</blockquote>
+            <div class="quote-person"><span class="avatar" aria-hidden="true">ML</span><div><strong>Marcus Lee</strong><small>Supply Chain Director, retail</small></div></div>
+          </article>
+          <article class="quote reveal">
+            <div class="quote-head"><span class="quote-stars" aria-label="5 out of 5">{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}</span><span class="chip">Point-to-point</span></div>
+            <blockquote>“Our directors move between meetings all day. The drivers are early, well-presented and discreet.”</blockquote>
+            <div class="quote-person"><span class="avatar" aria-hidden="true">DW</span><div><strong>Daniel Wong</strong><small>Executive Assistant, financial services</small></div></div>
+          </article>
+          <article class="quote reveal">
+            <div class="quote-head"><span class="quote-stars" aria-label="5 out of 5">{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}</span><span class="chip">Warehouse</span></div>
+            <blockquote>“Short-term storage during our renovation was a lifesaver. Stock came back exactly when we needed it.”</blockquote>
+            <div class="quote-person"><span class="avatar" aria-hidden="true">AR</span><div><strong>Aisyah Rahman</strong><small>Operations Lead, F&amp;B group</small></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ =====================
+         initFaq in main.js. To add a question, copy one <details class="faq-item"> and set
+         data-cat to booking | pricing | cover | ops (or add a new .faq-cat button with that value).
+         Keep answers consistent with terms.html and config.js (surcharges, cancellation, claims). -->
+    <section class="section section-tint" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="faq-intro reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Answers before you book.</h2>
+          <p>Search or filter the most common questions. Still unsure? Dispatch is on call 24/7.</p>
+          <div class="field faq-search">
+            <label class="sr-only" for="faq-q">Search questions</label>
+            <div class="input-icon">{{icon:search}}<input id="faq-q" type="search" placeholder="Search, e.g. insurance, Sunday, pallets" data-faq-search></div>
+          </div>
+          <div class="faq-cats" role="group" aria-label="Filter by topic" data-faq-cats>
+            <button class="faq-cat" type="button" data-cat="all" aria-pressed="true">All</button>
+            <button class="faq-cat" type="button" data-cat="booking" aria-pressed="false">Booking</button>
+            <button class="faq-cat" type="button" data-cat="pricing" aria-pressed="false">Pricing</button>
+            <button class="faq-cat" type="button" data-cat="cover" aria-pressed="false">Insurance</button>
+            <button class="faq-cat" type="button" data-cat="ops" aria-pressed="false">Operations</button>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="faq-list" data-faq-list>
+            <details class="faq-item" data-cat="booking" open>
+              <summary>Can you do same-day or urgent jobs?{{icon:plus}}</summary>
+              <p>Yes. Urgent jobs can usually be picked up within 30 to 55 minutes depending on the region and vehicle. Same-day bookings within 3 hours carry a 20% urgency surcharge, shown in your quote.</p>
+            </details>
+            <details class="faq-item" data-cat="pricing">
+              <summary>How is the price calculated?{{icon:plus}}</summary>
+              <p>Goods jobs are priced per trip by vehicle size and distance between regions. Charter and transfers are priced per hour with a minimum booking. Add-ons such as extra movers or tail-lift vehicles are itemised. The online figure is indicative; dispatch confirms a fixed written quotation.</p>
+            </details>
+            <details class="faq-item" data-cat="pricing">
+              <summary>Do you charge more at night, on Sundays or public holidays?{{icon:plus}}</summary>
+              <p>Pickups between 22:00 and 07:00 carry a 25% after-hours surcharge, and Sundays or public holidays carry 15%. Both are applied automatically in the instant quote so there are no surprises.</p>
+            </details>
+            <details class="faq-item" data-cat="cover">
+              <summary>Are my goods insured during the move?{{icon:plus}}</summary>
+              <p>Yes. Standard goods-in-transit cover is included on every job. For high-value items you can add enhanced cover for declared values up to S$20,000. SwiftLink is LTA-licensed under licence no. {{c:licence}}.</p>
+            </details>
+            <details class="faq-item" data-cat="ops">
+              <summary>How do I track my booking?{{icon:plus}}</summary>
+              <p>Your confirmation includes a tracking number such as SL-240918. Enter it on the Track page to see live status, driver and vehicle details and the ETA. Proof of delivery with photos and signature appears there on completion.</p>
+            </details>
+            <details class="faq-item" data-cat="ops">
+              <summary>Which vehicle do I need?{{icon:plus}}</summary>
+              <p>Use the vehicle matcher on the Services page: enter your cartons, pallets or passengers and it recommends the smallest vehicle that fits, so you don't pay for space you don't use.</p>
+            </details>
+            <details class="faq-item" data-cat="booking">
+              <summary>Can I set up monthly billing for my company?{{icon:plus}}</summary>
+              <p>Yes. A business account gives you 30-day credit terms, monthly statements, contract rates for recurring routes and a dedicated coordinator. It's free to open.</p>
+            </details>
+            <details class="faq-item" data-cat="cover">
+              <summary>What happens if something is damaged?{{icon:plus}}</summary>
+              <p>Pickup and drop-off photos are taken on every job. Report any issue within 48 hours and our team handles the claim with the insurer directly, keeping you updated until it's resolved.</p>
+            </details>
+            <details class="faq-item" data-cat="booking">
+              <summary>How do I cancel or reschedule?{{icon:plus}}</summary>
+              <p>Contact dispatch by phone, WhatsApp or email. Changes made more than 24 hours before pickup are free. Later changes may incur a fee depending on whether the vehicle has already been dispatched.</p>
+            </details>
+          </div>
+          <p class="faq-empty" data-faq-empty hidden>No questions match that search. Try another word, or <a href="contact.html">ask our team directly</a>.</p>
+        </div>
+      </div>
+    </section>

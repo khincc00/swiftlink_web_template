@@ -1,5 +1,7 @@
+<!-- Full-bleed app icon (no rounded corners): iOS and Android apply their own mask.
+     Source for apple-touch-icon.png and icon-maskable-512.png (see README → Icons). -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-  <rect width="40" height="40" rx="10" fill="#0A2463"/>
+  <rect width="40" height="40" fill="#0A2463"/>
   <path d="M11 12.5 18.5 20 11 27.5" fill="none" stroke="#7CC3E0" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M19.5 12.5 27 20l-7.5 7.5" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

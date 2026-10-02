@@ -1,0 +1,36 @@
+<!--
+title: Page not found | SwiftLink Logistics &amp; Transport
+description: The page you were looking for could not be found.
+nav: none
+robots: noindex
+rootlinks: yes
+-->
+<!--
+  404 PAGE — shown by the web host for any missing URL.
+  • Netlify, Vercel, GitHub Pages and Cloudflare Pages use /404.html automatically.
+    Apache: add `ErrorDocument 404 /404.html` to .htaccess. Nginx: `error_page 404 /404.html;`
+  • `rootlinks: yes` makes build.py prefix every relative link with SITE["base_path"]
+    so styles and links still work at nested URLs such as /old/page.html.
+    Because of that, preview this page through a local server (see README), not file://.
+  • `robots: noindex` keeps it out of search results and sitemap.xml.
+-->
+    <section class="page-hero page-hero-plain notfound" aria-labelledby="page-title">
+      <div class="container page-hero-inner">
+        <p class="notfound-code mono" aria-hidden="true">404</p>
+        <h1 id="page-title">This page took a wrong turn.</h1>
+        <p>The page you're looking for has moved or no longer exists. Here are the quickest routes back on track.</p>
+        <div class="page-hero-actions">
+          <a class="btn btn-primary btn-lg" href="index.html">{{icon:home}} Back to home</a>
+          <a class="btn btn-outline-light btn-lg" href="quote.html">Get an instant quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: clamp(2rem, 5vw, 3.5rem)" aria-label="Popular pages">
+      <div class="container notfound-links">
+        <a class="contact-card" href="services.html"><span class="trust-icon">{{icon:truck}}</span><div><small>Services</small><strong>Services &amp; fleet</strong><p>Delivery, charter, transfers, storage</p></div></a>
+        <a class="contact-card" href="track.html"><span class="trust-icon">{{icon:search}}</span><div><small>Track</small><strong>Track a shipment</strong><p>Use your SL- booking number</p></div></a>
+        <a class="contact-card" href="index.html#faq"><span class="trust-icon">{{icon:info}}</span><div><small>Help</small><strong>Frequently asked</strong><p>Pricing, insurance, bookings</p></div></a>
+        <a class="contact-card" href="contact.html"><span class="trust-icon">{{icon:headset}}</span><div><small>Contact</small><strong>Talk to dispatch</strong><p>24/7 by phone or WhatsApp</p></div></a>
+      </div>
+    </section>
